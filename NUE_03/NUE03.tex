@@ -70,6 +70,20 @@
 	Frequenzmodulation (FM) nachvollzogen. Dafür wurde zuerst immer das nötige
 	Signal erzeugt, welches dann moduliert und auch demoduliert wurde.
 \end{quote}
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------    
+\section{Theorie Modulation}
+\begin{quote}
+        Um Signale an spezielle Kanaleigenschaften anzupassen lassen sich diese Signale durch eine Modulation in
+        Amplitude und Frequenz verändern.\\
+        Dies hat beispielsweise den Vorteil, dass sich die Signale anschließend mit einer Frequenz
+        übertragen lassen auf der die Rauscheinflüsse geringer sind. Des weiteren entsteht durch Modulation die
+        Möglichkeit mittels Multiplexing mehrere Signale gleichzeitig über einen Kanal zu übertragen und diese im
+        nachhinein eindeutig unterscheinden zu können.\\
+        Um das Ursprungssignal auf der Empfängerseite nutzen zu können muss es realisierbare Demodulationsmethoden
+        geben.
+\end{quote}
+
 
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------    
@@ -78,6 +92,50 @@
 \begin{quote}
 	\subsection{Theorie}
     \begin{quote}
+        Bei der Amplituden Modulation wird aus dem Nutzsignal$u(t)$ mit einer variablen Amplitude und Frequenz ein
+        Moduliertes Signal mit einer festen Frequenz und variabler Amplitude. Dazu wird $u(t)$ mit einem
+        höherfrequenten Trägersignal $c(t)$ multipliziert. Daraus resultiert ein Signal mit der Frequenz des
+        Trägersignals und einer Amplitude, die von dem Nutzsignal gesteuert wird.
+        
+        \begin{equation*}
+        	\begin{split}
+        		u_m(t) = A_c [u(t)] \cdot cos(\omega_c t)
+        	\end{split}
+        \end{equation*}
+        
+        Es gibt zwei verschiedene Möglichkeiten dieser Modulation. Erstens die Amplituden Modulation ohne Träger und die
+        Amplituden Modulation mit Träger.
+        
+        \subsubsection{Amplitudenmodulation ohne Träger}
+		\begin{quote}
+			Bei dieser Art der Amplitudenmodulation wird die Amplitude linear durch das Nutzsignal gesteuert. Das bedeutet für
+			die Amplitude des modulierten Signals:
+			
+			\begin{equation*}
+            	\begin{split}
+            		A_c [u(t)] = k \cdot u(t)
+            	\end{split}
+            \end{equation*}
+            
+            Welche Auswirkung diese Art der Modulation auf ein Signal hat zeigt das folgende Bild sehr anschaulich. 
+            
+            \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.7, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/AMohneTraeger}
+                    \caption{Amplitudenmodulation ohne träger}
+                    \label{fig:AMohneTraeger}
+                    \cite{AMohnetraeger}
+            \end{figure}
+    
+            
+            
+		\end{quote}
+		
+		\subsubsection{Amplitudenmodulation mit Träger}
+		\begin{quote}
+			
+		\end{quote}
+        
         
     \end{quote}
     
@@ -141,5 +199,19 @@
 \begin{quote}
 	
 \end{quote}
+
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------    
+
+
+\begin{thebibliography}{999}
+\bibitem {AMohnetraeger} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
+Nachrichtenübertragung, S.207
+
+%Name, Vorname.; evtl. Name2, Vorname2.: Titel des Dokumentes
+%oder Buches, Zeitschrift/Verlag/URL (Auflage, Erscheinungsort, -jahr), ggf. Seitenzahlen
+% \bibitem {PasevalscheTheorem} \url{https://de.wikipedia.org/wiki/Parsevalsches_Theorem}, Zugriff
+% 23.05.2012
+\end{thebibliography}
 
 \end{document}
