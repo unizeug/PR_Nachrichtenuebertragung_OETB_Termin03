@@ -114,6 +114,7 @@
             	\end{split}
             \end{equation*}
             
+            
             Welche Auswirkung diese Art der Modulation auf ein Signal hat zeigt das folgende Bild sehr anschaulich. 
             
             \begin{figure}[H]
@@ -124,13 +125,56 @@
                     \cite{AMohnetraeger}
             \end{figure}
     
+            Um dieses modulierte Signal am Empfänger wieder zu demodulieren wird es noch ein weiteres mal mit dem
+            Trägersignal multipliziert und anschließend Tiefpassgefiltert. Welche Auswirkung das hat zeigt folgendes
+            Bild.
             
+            \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.7, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/AMohnetraegerdemodulation}
+                    \caption{Amplitudendemodulation ohne Träger}
+                    \cite{AMdemodulation}
+            \end{figure}
+    
+            Die Gesamte Übertragungsstecke der Amplitudenmodulation ohne Träger ist hier zu sehen.
+            
+            \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.7, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/uebertragungsstreckeAMohnetraeger}
+                    \caption{Übertragungsstrecke AM ohne Träger}
+                    \cite{AMohneUeber}
+            \end{figure}
+             
+             Damit diese Modulation jedoch Fehlerfrei funktioniert wird am Empfänger das kohärente Trägersignal
+             benötigt. Das Bedeutet, dass das Trägersignal in exakt der selben Phase und Frequenz am Empfänger vorhanden
+             sein muss. Ist das nicht der Fall kommt es zur Verfälschung des Nutzsignals bei der Demodulation.\\
+             Da das jedoch schwer zu realisieren ist wurde die zweite art der Amplitudenmodulation entwickelt:
+             Amplitudenmodulation mit Träger.
+             
             
 		\end{quote}
 		
 		\subsubsection{Amplitudenmodulation mit Träger}
 		\begin{quote}
+			Bei der Amplitudenmodulation mit Träger wird das Nutzsignal $u(t)$ bevor es mit dem Trägersignal $c(t)$
+			multipliziert wird mit einem Offset versehen.
 			
+			\begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.7, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/AMmitTraeger}
+                    \caption{Amplituden Modulation mit Träger}
+                    \cite{AMmitUeber}
+            \end{figure}
+            
+            Das bedeutet für die Amplitude des modulierten Signals:
+            
+            \begin{equation*}
+                \begin{split}
+                    A_c [u(t)] = A + k \cdot u(t)
+                \end{split}
+            \end{equation*}
+    
+		      
 		\end{quote}
         
         
@@ -302,6 +346,12 @@
 \begin{thebibliography}{999}
 \bibitem {AMohnetraeger} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
 Nachrichtenübertragung, S.207
+\bibitem {AMdemodulation} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
+Nachrichtenübertragung, S.209
+\bibitem {AMohneUeber} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
+Nachrichtenübertragung, S.206
+\bibitem {AMmitUeber} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
+Nachrichtenübertragung, S.206
 
 %Name, Vorname.; evtl. Name2, Vorname2.: Titel des Dokumentes
 %oder Buches, Zeitschrift/Verlag/URL (Auflage, Erscheinungsort, -jahr), ggf. Seitenzahlen
