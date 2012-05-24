@@ -12,7 +12,7 @@
 
 
 \newcommand{\pdftitle}{Nachrichten\"ubertragung\ Praktikum\ 03}
-\newcommand{\prototitle}{Praktikum 03 \\ Einf\"uhrung in MATLAB}
+\newcommand{\prototitle}{Praktikum 01 \\ Einf\"uhrung in MATLAB}
 
 
 \input{../../packages/tu_header_8}
@@ -85,9 +85,6 @@
 \end{quote}
 
 
-%--------------------------------------------------------------------
-%--------------------------------------------------------------------    
-
 \section{Amplitudenmodulation}
 \begin{quote}
 	\subsection{Theorie}
@@ -155,8 +152,43 @@
     
     \subsection{Durchführung}
     \begin{quote}
-            Als Basisbandsignal wurde ein mittelwertfreier Sinus erzeugt, welcher die
-            Frequenz
+    	\subsubsection{Signalerzeugung und Modulation}
+    	\begin{quote}
+    	Als Basisbandsignal generierten wir ein mittelwertfreier Sinus,
+    	der eine Frequenz von $100 Hz$ und eine Amplitude von $1 V$ besaß. Dazu wurde noch
+    	ein Offset von einem Volt addiert, welches wir mit dem Adder-Modul und der
+    	Quelle Variable DCV verwirklicht haben. Somit hatte unser Basisbandsignal
+    	keinen Nulldurchgang mehr. Mit den Verstärkerknöpfen g und G wurde die
+    	Summe vom Sinus und Offset korrekt eingestellt und am Oszilloskop
+    	korrigiert.\\
+    	Nachdem unser Nutzsignal erstellt wurde, führten wir die Modulation anhand
+    	einer Multiplikation mit dem Multiplier-Modul durch. Als Trägersignal
+    	verwendeten wir dabei den $2kHz$-Sinus des Master-Signal-Moduls.\\
+    	Nach der Untersuchung des Sinus-Basisbandsignals, wurde die Modulation auf
+    	gleiche Weise noch mit dem Rechteck- und dem Dreiecksignal durchgeführt.
+    	Die Ergebnisse aus dem Praktikum und der Vergleich mit den Ergebnissen aus
+    	der Vorbereitungsaufgabe ist in der Auswertung zu finden.
+    	\end{quote}
+    	
+    	\vspace{1em}
+    	
+    	\subsubsection{Synchrone Demodulation}
+    	\begin{quote}
+    	Nach der Amplitudenmodulation wurden die modulierten Signale auch
+    	synchron demoduliert. Dies ermöglichten wir mithilfe des zweiten
+    	Multiplier-Moduls und indem wir das Trägersignal erneut auf das modulierte
+    	Signal multiplizierten. In einem Plot kann man sehen, dass das
+    	Empfangssignal die doppelte Amplitude besitzt wie das Sendesignal. Diese
+    	Abweichung korrigierten wir anhand eines Vorfaktors von $0.5$ in unserem
+    	MATLAB-Skript.
+    	
+    	Ist das alles richtig so? Ich meine Michael Tok hatte gesagt, dass wir die
+    	Halbierung nicht auf dem Steckbrett machen müssen sondern einfach nur in
+    	MATLAB ne $\frac{1}{2}$ davor klatschen\ldots \\
+    	Die auftretenden Abweichungen erklären wir am Besten auch in der
+    	Auswertung.    	
+		\end{quote}    
+    
     \end{quote}
     
     \subsection{Auswertung}
@@ -167,6 +199,7 @@
 
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------            
+
 
 
 \section{Frequenzmodulation}
@@ -183,6 +216,68 @@
     
     \subsection{Durchführung}
     \begin{quote}
+        \subsubsection{Signalerzeugung}
+        \begin{quote}
+        Als Nutzsignal für die Frequenzmodulation wird ein $3 kHz$-Sinus mit
+        einer $1 V$-Amplitude verwendet. Die einfache Modulation verwirklichten
+        wir anhand des VCO-Moduls. Dabei wurde der Schalter in der Mitte auf
+        die Position LOW gesetzt (das Trägersignal kann damit eine
+        Nutzsignalfrequenz zwischen $1 kHz$ und $17 kHz$ annehmbar modulieren),
+        der FREQ-Controller auf die mittlere Position gestellt und GAIN auf
+        $\approx \frac{2}{3}$ des Maximalwerts gedreht.\\
+        Als nächstes wurde das Spektrum des FM-Signals untersucht und die
+        Trägerfrequenz $f_c$ sowie die Proportionalitätskonstante $K_{FM}$
+        bestimmt. Für die Proportionalitätskonstante gilf folgende Formel:
+        
+        \begin{equation*}
+    	\begin{split}
+    		K_{FM} &= \frac{2 \pi \Delta f_{max}}{A_u}\\
+			\Delta f_{max} \approx \frac{1}{2} (\frac{1}{T_{min}} - \frac{1}{T_{max}})    		
+    	\end{split}
+    	\end{equation*}
+    	
+   		$T_{min}$ und $T_{max}$ bezeichnen dabei die zeitlich kürzeste und längste
+   		Periodendauer des Sinussignals.\\
+   		Für einen späteren Vergleich wird auch das Spektrum des FM-Signals
+   		untersucht, bei der die Nutzfrequenz $f_u = 1 kHz$ und die Nutzamplitude
+   		$A_u = 1 V$ beträgt.\\
+   		Zusätzlich wurden noch die Nutzsignale mit den Amplituden $0.5 V\, 1 V$ und
+   		$2 V$ mit den Frequenzen $50 Hz\, 100 Hz$ und $200 Hz$ frequenzmoduliert
+   		und die Spektren des Ausgangs von dem VCO-Modul miteinander verglichen. 
+        \end{quote}
+        
+        \subsubsection{FM-Demodulation}
+        \begin{quote}
+        Für die folgende FM-Demodulation wurde zunächst die Einstellungen des
+        VCO-Moduls verändert. Der Schalter wurde auf HIGH gelegt (nun kann das
+        Trägersignal höhere Nutzfrequenzen als $17 kHz$ modulieren), sowie der
+        Trägerfrequenz-Drehknopf auf die Hälfte und der GAIN-Drehknopf auf $70
+        \%$ eingestellt. Das neu FM-modulierte Sinussignal, mit ursprünglich
+        $100 Hz$-Frequenz und $1 V$-Amplitude, wurde dann auf den Eingang des
+        Comparator-Moduls gelegt und mit einer Referenzspannung von $0 V$
+        verglichen.\\
+        
+        Die FM-Demodulation erfolgt in diesem Praktikum durch eine
+        FM-PFM-Umwandlung (PFM = Pulsfrequenzmodulation). Dabei wandelt der
+        Comparator das analoge Signal in ein Standard-Digitalsignal um. Dieses
+        besteht aus einer polaren Rechteckfolge, welche dadurch entsteht, dass
+        der Comparator jedesmal, wenn das Analogsignal (in diesem Fall der
+        von uns verwendete Sinus) das Referenzsignal übersteigt, einen positiven
+        Ausgangssignalpegel ausgibt. Wird das Analogsignal kleiner als die
+        Referenzspannung wird der Ausgangssignalpegel negativ. Dieses digitale
+        Signal wird in den Twin Pulse Generator (TPG) geführt, der aus jeder
+        steigenden Flanke ein Rechteckimpuls verwirklicht. Dafür werden die
+        Regler DELAY und WIDTH auf ihr Minimum gedreht. Die Pulse des
+        entstandenen Rechtecksignals werden abschließend wieder zu einem kontinuierlichen 
+        Signalpegel umgewandelt, indem sie durch einen Tiefpass
+        (TP) geführt werden.\\
+        
+        In der Auswertung vergleichen wir zusätzlich die das Sinusquellsignal
+        mit dem Comparator-Ausgang, das Sinusquellsignal mit dem Twin Pulse
+        Generator-Ausgang und den Comparator-Ausgang mit dem Twin Pulse
+        Generator-Ausgang.
+         
+        \end{quote}
         
     \end{quote}
     
