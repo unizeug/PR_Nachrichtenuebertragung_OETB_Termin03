@@ -222,15 +222,13 @@
     	synchron demoduliert. Dies ermöglichten wir mithilfe des zweiten
     	Multiplier-Moduls und indem wir das Trägersignal erneut auf das modulierte
     	Signal multiplizierten. In einem Plot kann man sehen, dass das
-    	Empfangssignal die doppelte Amplitude besitzt wie das Sendesignal. Diese
-    	Abweichung korrigierten wir anhand eines Vorfaktors von $0.5$ in unserem
-    	MATLAB-Skript.
+    	Empfangssignal vierfache Amplitude besitzt als das Sendesignal.
+    	Diese Abweichung korrigierten wir anhand eines Tiefpasses nach der
+    	Demodulation.
     	
-    	Ist das alles richtig so? Ich meine Michael Tok hatte gesagt, dass wir die
-    	Halbierung nicht auf dem Steckbrett machen müssen sondern einfach nur in
-    	MATLAB ne $\frac{1}{2}$ davor klatschen\ldots \\
-    	Die auftretenden Abweichungen erklären wir am Besten auch in der
-    	Auswertung.    	
+    	Ist das alles richtig so? was hatte Michael Tok denn gesagt? Auf jeden Fall
+    	haben wir Messwerte zu demodulierten und demoduliert gefilterten Signalen.
+    	Bei den gefilterten sind deutlich kleinere Amplituden zu sehen.
 		\end{quote}    
     
     \end{quote}
@@ -245,7 +243,8 @@
         
         In die minipages kommen immer die Vorbereitungsergebnisse und die
         Paktikumsergebnisse rein, damit sie miteinander verglichen werden
-        können.
+        können. Auf jeden Fall muss noch auf die Auswirkung der Veränderungen
+        von Amplitude und Offset des Basisbandsignals eingegangen werden.
         
         
         \begin{center}
@@ -285,6 +284,123 @@
                         \caption{amplitudenmoduliertes Rechtecksignal}
                 \end{figure}
         
+        
+        
+        Bei der Demodulation wurde das Trägersignal auf das
+        bereits modulierte Nutzsignal multipliziert. Die Synchronität war
+        dadurch gewährleistet, dass das selbe Trägersignal wie bei der
+        Modulation verwendet wurde.\\
+        Hier werden die ursprünglichen Sendesignalen mit den
+        demodulierten Empfangssignalen verglichen:
+        
+                \begin{center}
+            \begin{tabular}{ll}
+
+            \hspace{-14em}
+                \begin{minipage}{0.6\textwidth}
+
+                    \begin{figure}[H]
+                        \label{fig:}
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                        8.5cm, clip]{./Bilder/synchDemod_sinus} %FIXME
+                        % [width=640px, height=474px]
+                        \caption{amplitudendemoduliertes Sinussignal}
+                    \end{figure}
+
+                \end{minipage}
+                \begin{minipage}{0.6\textwidth}
+
+                     \begin{figure}[H]
+                        \label{fig:}
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                        8.5cm, clip]{./Bilder/synchDemod_dreieck} %FIXME
+                        % [width=640px, height=474px]
+                        \caption{amplitudendemoduliertes Dreiecksignal}
+                    \end{figure}
+               \vspace{-1.5em}
+
+                \end{minipage}
+
+            \end{tabular}
+            \end{center}
+            
+             \begin{figure}[H] \centering
+                    \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm 8.5cm,
+                    clip]{./Bilder/synchDemod_rechteck}
+                        \caption{amplitudendemoduliertes Rechtecksignal}
+                \end{figure}
+                
+                Man kann deutlich sehen, dass die Amplituden der Empfangssignale
+                stets um den Faktor $4$ höher sind als die Amplituden der
+                Sendesignale. Dies liegt daran, dass \ldots
+                
+                Das noch fehlende Modul war ein Tiefpass, der auf dem
+                Steckbrett bereits realisiert war, der die unnötig höheren
+                Frequenzen filterte.
+                Der TP wurde dabei manuell so eingestellt, bis das Ergebniss ungefähr 
+                den Erwartungen des Sendesignals entsprach. Dabei maßen wir
+                mithilfe des Oszilloskops die jeweiligen Periodendauer von den
+                Empfangssignalen und konnten mit $T_{Periode}$ rückwirkend die
+                Grenzfrequenzen bestimmen. Dabei verwendeten wir den
+                Zusammenhang $f = \frac{1}{T}$. Wichtig dabei war es den in dem
+                TP integrierten Vorfaktor von $100$ zu berücksichtigen, um keine 
+                hundertfache Frequenzen zu erhalten. Es ergab sich für das
+                Sinusempfangssignal eine Periode von $T = 50\mu s$ und die
+                Grenzfrequenz $f = 0.2 kHz$. Für das Dreieckempfangssignal
+                erhielten wir eine Periodendauer von $T = 20\mu s$ und die Grenzfrequenz
+                $f = 0.5 kKz$ sowie eine Periodendauer von $T = 2.5\mu s$ und
+                die Grenzfrequenz $f = 4 kKz$ für das Rechteckempfangssignal.
+                Die Ergebnisse nach der Filterung wurden ebenfalls geplottet und
+                erneut mit dem ursprünglichen Sendesignal verglichen.
+                
+                \begin{center}
+            \begin{tabular}{ll}
+
+            \hspace{-14em}
+                \begin{minipage}{0.6\textwidth}
+
+                    \begin{figure}[H]
+                        \label{fig:}
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                        8.5cm, clip]{./Bilder/synchDemodFilter_sinus} %FIXME
+                        % [width=640px, height=474px]
+                        \caption{AM-demoduliertes und
+                        TP-gefiltertes Sinussignal}
+                    \end{figure}
+
+                \end{minipage}
+                \begin{minipage}{0.6\textwidth}
+
+                     \begin{figure}[H]
+                        \label{fig:}
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                        8.5cm, clip]{./Bilder/synchDemodFilter_dreieck} %FIXME
+                        % [width=640px, height=474px]
+                        \caption{AM-demoduliertes und
+                        TP-gefiltertes Dreiecksignal}
+                    \end{figure}
+               \vspace{-1.5em}
+
+                \end{minipage}
+
+            \end{tabular}
+            \end{center}
+            
+             \begin{figure}[H] \centering
+                    \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm 8.5cm,
+                    clip]{./Bilder/synchDemodFilter_rechteck}
+                        \caption{AM-demoduliertes und
+                        TP-gefiltertes Rechtecksignal}
+                \end{figure}
+                
+                Man kann nun sehen, dass die Amplituden der Empfangssignale
+                deutlich kleiner sind als in der ungefilterten Demodulation,
+                aber auch viel kleiner sind als die Amplituden Sendesignale.
+                
+                Warum das so ist, weiß ich nicht mehr\ldots
+                
+                 
+         
     \end{quote}
 \end{quote}
 
