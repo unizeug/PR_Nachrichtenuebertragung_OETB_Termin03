@@ -491,6 +491,86 @@
     
     \subsection{Auswertung}
     \begin{quote}
+    
+        Nach der Frequenzmodulation des Sinusnutzsignals mit der Frequenz 
+        $3 kHz$ und der Amplitude $1 V$ erhielten wir folgendes Zeitsignal.
+    	
+             \begin{figure}[H] \centering
+                    \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm 8.5cm,
+                    clip]{./Bilder/fm_sinus(3kHz)}
+                        \caption{frequenzmoduliertes Sinusnutzsignal (3kHz)}
+                \end{figure}
+        
+        Das Verhältnis dieser beiden Signale wurde mit dem Oszilloskop genauer
+        untersucht um die Proportionalitätskonstante berechnen zu können. Dafür
+        zoomten wir einmal in einen passenden Bereich, wo die Amplitude des
+        Nutzsignals hoch war und einmal in einen passenden Bereich, wo die
+        Amplitude des Nutzsignals niedrig war.
+        
+         
+                \begin{center}
+            \begin{tabular}{ll}
+
+            \hspace{-14em}
+                \begin{minipage}{0.6\textwidth}
+
+                    \begin{figure}[H]
+                        \label{fig:}
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                        8.5cm, clip]{./Bilder/aufgabe_4_12_sinus_high-ampl}
+                        %FIXME [width=640px, height=474px]
+                        \caption{hohe Amplitude des Nutzsignals zur
+                        Periodendauerbestimmung (Tmin) des FM-Empfangssignals}
+                    \end{figure}
+
+                \end{minipage}
+                \begin{minipage}{0.6\textwidth}
+
+                     \begin{figure}[H]
+                        \label{fig:}
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                        8.5cm, clip]{./Bilder/aufgabe_4_12_sinus_low-ampl}
+                        %FIXME [width=640px, height=474px]
+                        \caption{niedrige Amplitude des Nutzsignals zur
+                        Periodendauerbestimmung (Tmax) des FM-Empfangssignals}
+                    \end{figure}
+               \vspace{-1.5em}
+
+                \end{minipage}
+
+            \end{tabular}
+            \end{center}
+        
+        Bei der ersten Messung erhielten wir eine $T_{min}$ von ungefähr 
+        $84\mu s$, bei der zweiten Messung waren es für $T_{max}$ ungefähr 
+        $120\mu s$. Mit diesen Werten können wir zunächst das $\Delta f_{max}$
+        berechnen, womit dich dann auch das $K_{FM}$ (mit $A_u = 1V$) berechnen
+        lässt.
+        
+      \begin{equation*}
+       \begin{split}
+		\Delta f_{max} &\approx \frac{1}{2} (\frac{1}{84\mu s} - \frac{1}{120\mu s})\\
+					   &\approx 1.786 kHz \\
+		\\			
+			
+	    K_{FM} &= \frac{2 \pi \cdot 1.786 kHz}{1 V}\\
+	    	   &= 11221.768    		
+       \end{split}
+     \end{equation*}
+        
+        Somit beträgt unser Proportionalitätsfaktor $K_{FM} = 11221.768$.\\
+        
+        Für die Berechnung der Trägerfrequenz wird folgendes getan\ldots 
+        (müssen wir auf jeden Fall noch ergänzen, und auch noch die Messreihe
+        mit dem $1 kHz$ Sinusnutzsignal, damit wir einen Vergleich anstellen
+        können, so wie in der Aufgabe erwartet\ldots)
+        
+        Hier sollten dann die Spektren beider FM Modulationen verglichen werden,
+        mit sinus $1 kHz$ und sinus $3 kHz$\ldots
+        
+        
+        
+        
         
     \end{quote}	
 \end{quote}
