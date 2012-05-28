@@ -173,6 +173,21 @@
                     A_c [u(t)] = A + k \cdot u(t)
                 \end{split}
             \end{equation*}
+            
+            Diese Art der Modulation hat folgende auswirkungen auf das Signal:
+            
+            \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.7, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/AMmittraegersignal}
+                    \caption{Amplituden}
+                    \cite{AMmitUeber}
+            \end{figure}
+            
+            Für die Demodulation stehen bei diesem Verfahren zwei Möglichkeiten zur verfügung. Einerseits dieselbe
+            Demodulation wie oben schon beschrieben, die erneute multiplikation mit dem Trägersignal.\\
+            Andererseits lässt sich dieses Signal auch demodulieren indem das Signal gleichgerichtet wird und
+            anschließend der Offset entfernt wird Außerdem muss auch dieses Signal Tiefpassgefiltert werden. Der Vorteil
+            dieser zweiten Methode ist, dass sie sehr viel einfacher auf der Empfängerseite zu realisieren ist als die erst Art der Demodulation.
     
 		      
 		\end{quote}
@@ -250,15 +265,15 @@
         \begin{center}
             \begin{tabular}{ll}
 
-            \hspace{-14em}
+            \hspace{-10em}
                 \begin{minipage}{0.6\textwidth}
 
                     \begin{figure}[H]
                         \label{fig:}
                         \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/am-sinus} %FIXME [width=640px,
+                        8.5cm, clip]{./Bilder/Cosinusmodsimuliert} %FIXME [width=640px,
                         % height=474px]
-                        \caption{amplitudenmoduliertes Sinussignal}
+                        \caption{amplitudenmoduliertes Cosinussignal simuliert}
                     \end{figure}
 
                 \end{minipage}
@@ -267,9 +282,9 @@
                      \begin{figure}[H]
                         \label{fig:}
                         \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/am-dreieck} %FIXME
+                        8.5cm, clip]{./Bilder/Cosinusmodgemessen} %FIXME
                         % [width=640px, height=474px]
-                        \caption{amplitudenmoduliertes Dreiecksignal}
+                        \caption{amplitudenmoduliertes Cosinussignal gemessen}
                     \end{figure}
                \vspace{-1.5em}
 
@@ -278,11 +293,68 @@
             \end{tabular}
             \end{center}
             
-             \begin{figure}[H] \centering
-                    \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm 8.5cm,
-                    clip]{./Bilder/am-rechteck}
-                        \caption{amplitudenmoduliertes Rechtecksignal}
-                \end{figure}
+                    \begin{center}
+            \begin{tabular}{ll}
+
+            \hspace{-10em}
+                \begin{minipage}{0.6\textwidth}
+
+                    \begin{figure}[H]
+                        \label{fig:}
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                        8.5cm, clip]{./Bilder/Dreieckmodsimuliert} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{amplitudenmoduliertes Dreiecksignal simuliert}
+                    \end{figure}
+
+                \end{minipage}
+                \begin{minipage}{0.6\textwidth}
+
+                     \begin{figure}[H]
+                        \label{fig:}
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                        8.5cm, clip]{./Bilder/Dreieckmodgemessen} %FIXME
+                        % [width=640px, height=474px]
+                        \caption{amplitudenmoduliertes Dreiecksignal gemessen}
+                    \end{figure}
+               \vspace{-1.5em}
+
+                \end{minipage}
+
+            \end{tabular}
+            \end{center}
+            
+                    \begin{center}
+            \begin{tabular}{ll}
+
+            \hspace{-10em}
+                \begin{minipage}{0.6\textwidth}
+
+                    \begin{figure}[H]
+                        \label{fig:}
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                        8.5cm, clip]{./Bilder/Rechteckmodsimuliert} %FIXME [width=640px,
+                        % height=474px]
+                        \caption{amplitudenmoduliertes Rechtecksignal simuliert}
+                    \end{figure}
+
+                \end{minipage}
+                \begin{minipage}{0.6\textwidth}
+
+                     \begin{figure}[H]
+                        \label{fig:}
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                        8.5cm, clip]{./Bilder/Rechteckmodgemessen} %FIXME
+                        % [width=640px, height=474px]
+                        \caption{amplitudenmoduliertes Rechtecksignal gemessen}
+                    \end{figure}
+               \vspace{-1.5em}
+
+                \end{minipage}
+
+            \end{tabular}
+            \end{center}
+
         
         
         
@@ -414,12 +486,13 @@
 \begin{quote}
     \subsection{Theorie}
     \begin{quote}
-        
+        \TODO{Boris}
     \end{quote}
     
     \subsection{Vorbereitungsaufgabe}
     \begin{quote}
-     
+        Um ein Frequenzmoduliertes Signal zu simulieren, welches wir später mit einem gemessenen Signal zuvergleichen,
+        erzeugen wir ein Cosinussignal mit einer Frequenz von $1kHz$ und einer Amplitude von $1V$. Anschließend
     \end{quote}
     
     \subsection{Durchführung}
@@ -595,7 +668,9 @@ Nachrichtenübertragung, S.209
 \bibitem {AMohneUeber} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
 Nachrichtenübertragung, S.206
 \bibitem {AMmitUeber} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
-Nachrichtenübertragung, S.206
+Nachrichtenübertragung, S.215
+
+
 
 %Name, Vorname.; evtl. Name2, Vorname2.: Titel des Dokumentes
 %oder Buches, Zeitschrift/Verlag/URL (Auflage, Erscheinungsort, -jahr), ggf. Seitenzahlen
