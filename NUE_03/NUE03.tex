@@ -12,7 +12,7 @@
 
 
 \newcommand{\pdftitle}{Nachrichten\"ubertragung\ Praktikum\ 03}
-\newcommand{\prototitle}{Praktikum 01 \\ Einf\"uhrung in MATLAB}
+\newcommand{\prototitle}{Praktikum 03 \\ Modulation von Signalen}
 
 
 \input{../../packages/tu_header_8}
@@ -89,7 +89,7 @@
 \begin{quote}
 	\subsection{Theorie}
     \begin{quote}
-        Bei der Amplituden Modulation wird aus dem Nutzsignal$u(t)$ mit einer variablen Amplitude und Frequenz ein
+        Bei der Amplituden Modulation wird aus dem Nutzsignal $u(t)$ mit einer variablen Amplitude und Frequenz ein
         Moduliertes Signal mit einer festen Frequenz und variabler Amplitude. Dazu wird $u(t)$ mit einem
         höherfrequenten Trägersignal $c(t)$ multipliziert. Daraus resultiert ein Signal mit der Frequenz des
         Trägersignals und einer Amplitude, die von dem Nutzsignal gesteuert wird.
@@ -100,8 +100,8 @@
         	\end{split}
         \end{equation*}
         
-        Es gibt zwei verschiedene Möglichkeiten dieser Modulation. Erstens die Amplituden Modulation ohne Träger und die
-        Amplituden Modulation mit Träger.
+        Es gibt zwei verschiedene Möglichkeiten dieser Modulation. Erstens die Amplitudenmodulation ohne Träger und
+        zweitens die Amplitudenmodulation mit Träger.
         
         \subsubsection{Amplitudenmodulation ohne Träger}
 		\begin{quote}
@@ -149,7 +149,7 @@
              benötigt. Das Bedeutet, dass das Trägersignal in exakt der selben Phase und Frequenz am Empfänger vorhanden
              sein muss. Ist das nicht der Fall kommt es zur Verfälschung des Nutzsignals bei der Demodulation.\\
              Da das jedoch schwer zu realisieren ist wurde die zweite art der Amplitudenmodulation entwickelt:
-             Amplitudenmodulation mit Träger.
+             die Amplitudenmodulation mit Träger.
              
             
 		\end{quote}
@@ -166,7 +166,7 @@
                     \cite{AMmitUeber}
             \end{figure}
             
-            Das bedeutet für die Amplitude des modulierten Signals:
+            Für die Amplitude des modulierten Signals bedeutet das :
             
             \begin{equation*}
                 \begin{split}
@@ -201,11 +201,12 @@
         Als Vorbereitung für die Messungen zum Thema Amplitudenmodulation haben wir mit Hilfe von Matlab verschiedene
         Signalformen simuliert und anschließend Amplituden moduliert.\\
         Dazu haben wir als Nutzsignal jeweils ein Rechtecksignal, ein Dreiecksignal sowie ein Cosinussignal mit
-        einer Amplitude (von Nulldurchgang zum Spitzenwert) von $1V$ und einer Frequenz von $100 Hz$. Zusätzlich haben
-        wir noch ein Trägersignal mit der selben Amplitude aber mit einer Trägerfrequenz von $2000 Hz$ erstellt.\\
+        einer Amplitude (von Nulldurchgang zum Spitzenwert) von $1V$, einer Frequenz von $100 Hz$ und einem Offset von
+        $1V$ erzeugt.
+        Zusätzlich haben wir noch ein Trägersignal mit der selben Amplitude aber mit einer Trägerfrequenz von $2000 Hz$ erstellt.\\
         Anschließend haben wir die drei Nutzsignale Amplitudenmoduliert indem wir sie jeweils mit dem Tägersignal
         multipliziert haben.\\
-        Zur Analyse haben abschließende diese modulierten Signale sowie ihre Amplituden- und Phasengänge platten
+        Zur Analyse haben abschließende diese modulierten Signale sowie ihre Amplituden- und Phasengänge plotten
         lassen.\\
         In der Auswertung werden wir diese Ergebnisse anschließend mit den gemessenen Ergebnissen vergleichen.
     \end{quote}
