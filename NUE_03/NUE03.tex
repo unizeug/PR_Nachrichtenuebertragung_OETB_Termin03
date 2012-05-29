@@ -7,7 +7,7 @@
 \newcommand{\veranstaltung}{Praktikum Nachrichten\"ubertragung}
 \newcommand{\pdfautor}{\"Ozg\"u Dogan (326 048), Boris Henckell (325 779)}
 \newcommand{\autor}{\"Ozg\"u Dogan (326 048)\\ Boris Henckell (325 779)}
-\newcommand{\gruppe}{Gruppe: }
+\newcommand{\gruppe}{Gruppe: D03}
 %\newcommand{\betreuer}{Betreuer: Mahmoud Felk}
 
 
@@ -62,6 +62,8 @@
 %---------------------------------------------------------------------
 %---------------------------------------------------------------------
 %---------------------------------------------------------------------
+
+\TODO{Noch mindestens einmal durchlesen und die Todo's bearbeiten}
 
 \section{Einleitung}
 \begin{quote}
@@ -253,230 +255,275 @@
     \subsection{Auswertung}
     \begin{quote}
         
-        Hier kann man die Ergebnisse der Amplitudenmodulation sehen. Alle
-        Nutzsignale hatten eine Frequenz von $100 Hz$, eine Amplitude von $1 V$
-        und einen Offset von ebenfalls $1 V$. Das Trägersignal war ein $2
-        kHz$-Sinus.
+        Hier kann man die Ergebnisse der Amplitudenmodulation sehen. Alle Nutzsignale, sowohl simuliert als auch
+        gemessen, hatten eine Frequenz von $100 Hz$, eine Amplitude von $1 V$ und einen Offset von ebenfalls $1 V$. Das
+        Trägersignal war ein $2 kHz$-Sinus.
         
-        In die minipages kommen immer die Vorbereitungsergebnisse und die
+        \TODO{        In die minipages kommen immer die Vorbereitungsergebnisse und die
         Paktikumsergebnisse rein, damit sie miteinander verglichen werden
         können. Auf jeden Fall muss noch auf die Auswirkung der Veränderungen
-        von Amplitude und Offset des Basisbandsignals eingegangen werden.
+        von Amplitude und Offset des Basisbandsignals eingegangen werden.}
+
         
-        
-        \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-10em}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/Cosinusmodsimuliert} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{amplitudenmoduliertes Cosinussignal simuliert}
-                    \end{figure}
-
-                \end{minipage}
-                \begin{minipage}{0.6\textwidth}
-
-                     \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/Cosinusmodgemessen} %FIXME
-                        % [width=640px, height=474px]
-                        \caption{amplitudenmoduliertes Cosinussignal gemessen}
-                    \end{figure}
-               \vspace{-1.5em}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
+        \subsubsection{modulierte Signale}
+		\begin{quote}
+		  
+		  Wir erwaten bei den drei Signalen nach der modulation das ursprüngliche Nutzsignal in als Einhüllende des
+		  modulierten Signals wiederzufinden. Innerhalb dieser Einhüllenden wird das $2kHz$ Trägersignal zu finden sein.
+		  
+            \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-10em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6.5cm 1.5cm
+                            8.5cm, clip]{./Bilder/Cosinusmodsimuliert} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{amplitudenmoduliertes Cosinussignal simuliert}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                         \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6.5cm 1.5cm
+                            8.5cm, clip]{./Bilder/Cosinusmodgemessen} %FIXME
+                            % [width=640px, height=474px]
+                            \caption{amplitudenmoduliertes Cosinussignal gemessen}
+                        \end{figure}
+                   \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-10em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6.5cm 1.5cm
+                            8.5cm, clip]{./Bilder/Dreieckmodsimuliert} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{amplitudenmoduliertes Dreiecksignal simuliert}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                         \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6.5cm 1.5cm
+                            8.5cm, clip]{./Bilder/Dreieckmodgemessen} %FIXME
+                            % [width=640px, height=474px]
+                            \caption{amplitudenmoduliertes Dreiecksignal gemessen}
+                        \end{figure}
+                   \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                        \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-10em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6.5cm 1.5cm
+                            8.5cm, clip]{./Bilder/Rechteckmodsimuliert} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{amplitudenmoduliertes Rechtecksignal simuliert}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                         \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6.5cm 1.5cm
+                            8.5cm, clip]{./Bilder/Rechteckmodgemessen} %FIXME
+                            % [width=640px, height=474px]
+                            \caption{amplitudenmoduliertes Rechtecksignal gemessen}
+                        \end{figure}
+                   \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                Unsere Erwartung bestätigt sich schon bei den in den Vorbereitungsaufgaben simulierten Signalen. Die
+                original Cosinus-, Dreieck- und Rechteckförmigen Nutzsignale sind problemlos zu erkennen. Wobei zu
+                beachten ist, dass es sich bei der Einhüllenden um mehr als nur das Nutzsignal handelt, da das Signal
+                von $-2V$ bis $+2V$ alterniert. Erfreulich ist, dass sich auch die gemessenen modulierten Signale
+                ziemlich eindeutig so ergeben wie wir es erwartet haben.\\
+                Jedoch fallen auch einige Unterschiede in der Genauigkeit der Spektren der simulierten Signale im
+                Verleich zu den gemessenen Signalen auf. Diese unterschiedliche Genauigkeit lässt sich sehr schon an dem
+                Cosinussignal betrachten. Während das simulierte Spektrum ausschließlich $6$ Peaks bei $\pm 2000 Hz$
+                besitzt kann man bei den gemessen Signalen neben diesen $6$ Peaks auch noch diverse andere Frequenzen
+                erkennen. Da diese $6$ entsprechenden Peaks auch bei dem gemessene Signal besonders herausragen lässt
+                sich sagen, dass es sich um die entscheidenden Frequenzen des Spektrums handels. Die weiteren Frequenzen
+                sind auf Rauschen, ungenaue Einstellungen und andere Störungen bei der realen Messung zurückzuführen.\\
+                Diese Vermutung wird auch durch das Rechtecksignal verstärkt. Während das simulierte Signal reine
+                Nullabschnitte besitzt sind die entsprechenden Abschnitte bei dem gemessenen Signal durch sichtbare
+                Welligkeit geprägt. Da diese Welligkeit auffallend wie das $2kHz$ Trägersignal aussieht liegt die
+                Vermutung nahe, dass das Nutzsignal nicht exakt auf $0V$ runtergestellt war.
+                  
+                
+			
+		\end{quote}
             
-                    \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-10em}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/Dreieckmodsimuliert} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{amplitudenmoduliertes Dreiecksignal simuliert}
-                    \end{figure}
-
-                \end{minipage}
-                \begin{minipage}{0.6\textwidth}
-
-                     \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/Dreieckmodgemessen} %FIXME
-                        % [width=640px, height=474px]
-                        \caption{amplitudenmoduliertes Dreiecksignal gemessen}
-                    \end{figure}
-               \vspace{-1.5em}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
+        \subsubsection{demodulierte Signale ohne Tiefpass}
+		\begin{quote}
+            Bei der Demodulation wurde das Trägersignal ein zweites mal auf das
+            bereits modulierte Nutzsignal multipliziert. Die Synchronität war
+            dadurch gewährleistet, dass das selbe Trägersignal wie bei der
+            Modulation verwendet wurde.\\
+            Hier werden die ursprünglichen Sendesignalen mit den
+            demodulierten Empfangssignalen verglichen:
             
-                    \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-10em}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/Rechteckmodsimuliert} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{amplitudenmoduliertes Rechtecksignal simuliert}
-                    \end{figure}
-
-                \end{minipage}
-                \begin{minipage}{0.6\textwidth}
-
-                     \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/Rechteckmodgemessen} %FIXME
-                        % [width=640px, height=474px]
-                        \caption{amplitudenmoduliertes Rechtecksignal gemessen}
-                    \end{figure}
-               \vspace{-1.5em}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
-            
-
-        
-        
-        
-        Bei der Demodulation wurde das Trägersignal auf das
-        bereits modulierte Nutzsignal multipliziert. Die Synchronität war
-        dadurch gewährleistet, dass das selbe Trägersignal wie bei der
-        Modulation verwendet wurde.\\
-        Hier werden die ursprünglichen Sendesignalen mit den
-        demodulierten Empfangssignalen verglichen:
-        
                 \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-14em}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/synchDemod_sinus} %FIXME
-                        % [width=640px, height=474px]
-                        \caption{amplitudendemoduliertes Sinussignal}
+                \begin{tabular}{ll}
+    
+                \hspace{-14em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                            8.5cm, clip]{./Bilder/synchDemod_sinus} %FIXME
+                            % [width=640px, height=474px]
+                            \caption{amplitudendemoduliertes Sinussignal}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                         \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                            8.5cm, clip]{./Bilder/snychDemod_dreieck.pdf} %FIXME
+                            % [width=640px, height=474px]
+                            \caption{amplitudendemoduliertes Dreiecksignal}
+                        \end{figure}
+                   \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                 \begin{figure}[H] \centering
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm 8.5cm,
+                        clip]{./Bilder/synchDemod_rechteck}
+                            \caption{amplitudendemoduliertes Rechtecksignal}
                     \end{figure}
-
-                \end{minipage}
-                \begin{minipage}{0.6\textwidth}
-
-                     \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/synchDemod_dreieck} %FIXME
-                        % [width=640px, height=474px]
-                        \caption{amplitudendemoduliertes Dreiecksignal}
+                    
+                    Zunächst ist zu beobachten, dass sich auch hier das Nutzsignal hervorragend
+                    erkennen lässt.\\
+                    Im Gegensatz zu dem modulierten Signal alterniert das Signal nicht mehr von $-2V$ bis $+2V$ sondern
+                    hier von $0V$ bis $+4V$. Dadurch ist das demodulierte Signal dem Eingangssignal ein Schritt
+                    ähnlicher geworden. Es unterscheidet sich noch durch einen Verstärkungsfaktor sowie die höheren
+                    Frequenzen des Trägersignals von dem originalsignal.\vspace{1em}
+                    
+                    Der Verstärkungsfaktor von $4$ basiert auf der multiplikation, die für die Amplitudenmodulation
+                    benötigt wird. Der maximalwert des Nutzsignals von $2V$ wird zuerst bei der Modulation und später
+                    bei der Demodulation mit den $2V$ des Trägersignals multipliziert. Daher der Spitzenwert von $8V$
+                    bei dem demodulierten Signal.\\
+                    
+     			
+		\end{quote}
+		
+		\subsubsection{demodulierte Signale mit Tiefpass}
+		\begin{quote}
+                    Um die durch die modulation entstehenden oberwellen wieder von dem Demodulierten Signal zu
+                    trennen wird das Signal noch einmal Tiefpassgefiltert. Ein solcher Tiefpass ist schon auf dem
+                    Trainingsbrett vorhanden.\\
+                    Der TP wurde dabei manuell so eingestellt, bis das Ergebniss ungefähr 
+                    den Erwartungen des Sendesignals entsprach. Dabei maßen wir
+                    mithilfe des Oszilloskops die jeweiligen Periodendauer von den
+                    Empfangssignalen und konnten mit $T_{Periode}$ rückwirkend die
+                    Grenzfrequenzen bestimmen. Dabei verwendeten wir den
+                    Zusammenhang $f = \frac{1}{T}$. Wichtig dabei war es den in dem
+                    TP integrierten Vorfaktor von $100$ zu berücksichtigen, um keine 
+                    hundertfache Frequenzen zu erhalten. Es ergab sich für das
+                    Sinusempfangssignal eine Periode von $T = 50\mu s$ und die
+                    Grenzfrequenz $f = 0.2 kHz$. Für das Dreieckempfangssignal
+                    erhielten wir eine Periodendauer von $T = 20\mu s$ und die Grenzfrequenz
+                    $f = 0.5 kKz$ sowie eine Periodendauer von $T = 2.5\mu s$ und
+                    die Grenzfrequenz $f = 4 kKz$ für das Rechteckempfangssignal.
+                    Die Ergebnisse nach der Filterung wurden ebenfalls geplottet und
+                    erneut mit dem ursprünglichen Sendesignal verglichen.
+                    
+                    \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-14em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                            8.5cm, clip]{./Bilder/synchDemodFilter_sinus} %FIXME
+                            % [width=640px, height=474px]
+                            \caption{AM-demoduliertes und
+                            TP-gefiltertes Sinussignal}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                         \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
+                            8.5cm, clip]{./Bilder/synchDemodFilter_dreieck} %FIXME
+                            % [width=640px, height=474px]
+                            \caption{AM-demoduliertes und
+                            TP-gefiltertes Dreiecksignal}
+                        \end{figure}
+                   \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                 \begin{figure}[H] \centering
+                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm 8.5cm,
+                        clip]{./Bilder/synchDemodFilter_rechteck}
+                            \caption{AM-demoduliertes und
+                            TP-gefiltertes Rechtecksignal}
                     \end{figure}
-               \vspace{-1.5em}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
-            
-             \begin{figure}[H] \centering
-                    \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm 8.5cm,
-                    clip]{./Bilder/synchDemod_rechteck}
-                        \caption{amplitudendemoduliertes Rechtecksignal}
-                \end{figure}
-                
-                Man kann deutlich sehen, dass die Amplituden der Empfangssignale
-                stets um den Faktor $4$ höher sind als die Amplituden der
-                Sendesignale. Dies liegt daran, dass \ldots
-                
-                Das noch fehlende Modul war ein Tiefpass, der auf dem
-                Steckbrett bereits realisiert war, der die unnötig höheren
-                Frequenzen filterte.
-                Der TP wurde dabei manuell so eingestellt, bis das Ergebniss ungefähr 
-                den Erwartungen des Sendesignals entsprach. Dabei maßen wir
-                mithilfe des Oszilloskops die jeweiligen Periodendauer von den
-                Empfangssignalen und konnten mit $T_{Periode}$ rückwirkend die
-                Grenzfrequenzen bestimmen. Dabei verwendeten wir den
-                Zusammenhang $f = \frac{1}{T}$. Wichtig dabei war es den in dem
-                TP integrierten Vorfaktor von $100$ zu berücksichtigen, um keine 
-                hundertfache Frequenzen zu erhalten. Es ergab sich für das
-                Sinusempfangssignal eine Periode von $T = 50\mu s$ und die
-                Grenzfrequenz $f = 0.2 kHz$. Für das Dreieckempfangssignal
-                erhielten wir eine Periodendauer von $T = 20\mu s$ und die Grenzfrequenz
-                $f = 0.5 kKz$ sowie eine Periodendauer von $T = 2.5\mu s$ und
-                die Grenzfrequenz $f = 4 kKz$ für das Rechteckempfangssignal.
-                Die Ergebnisse nach der Filterung wurden ebenfalls geplottet und
-                erneut mit dem ursprünglichen Sendesignal verglichen.
-                
-                \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-14em}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/synchDemodFilter_sinus} %FIXME
-                        % [width=640px, height=474px]
-                        \caption{AM-demoduliertes und
-                        TP-gefiltertes Sinussignal}
-                    \end{figure}
-
-                \end{minipage}
-                \begin{minipage}{0.6\textwidth}
-
-                     \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/synchDemodFilter_dreieck} %FIXME
-                        % [width=640px, height=474px]
-                        \caption{AM-demoduliertes und
-                        TP-gefiltertes Dreiecksignal}
-                    \end{figure}
-               \vspace{-1.5em}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
-            
-             \begin{figure}[H] \centering
-                    \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm 8.5cm,
-                    clip]{./Bilder/synchDemodFilter_rechteck}
-                        \caption{AM-demoduliertes und
-                        TP-gefiltertes Rechtecksignal}
-                \end{figure}
-                
-                Man kann nun sehen, dass die Amplituden der Empfangssignale
-                deutlich kleiner sind als in der ungefilterten Demodulation,
-                aber auch viel kleiner sind als die Amplituden Sendesignale.
-                Die aufgetretenen Abweichungen kann man folgendermaßen erklären.
-                
-                Warum das so ist, weiß ich nicht mehr\ldots
-                
-                 
-         
+                    
+                    Nach der Tiefpassfilterung erkennt kann aus dem demodulierten Signal glücklicherweise noch das
+                    originalsignal erkannt werden. Jedoch müssen wir durch die abschließende Tiefpassfilterung einen
+                    erheblichen Qualitätsverlust des Signals hinnehmen. Es ist gut möglich, dass wir mit dem
+                    Tiefpassfilter nicht exakt genug gefiltert haben.\\
+                    Dass das demodulierte Signal in der Amplitude kleiner ist als das Originalsignal liegt an der
+                    Methode der Amplitudenmodulation. Bei jeder multiplikation mit dem Trägersignal wird die Energie des
+                    Signals halbiert und um die Trägerfrequenz in positive und negative Richtung verschoben. Das heißt,
+                    dass das Ursprungssignal nach zweifacher multuplikation in vier gleichgroße Energiepakete aufgeteilt
+                    wurde. Da jedoch zwei dieser vier genau auf der Ursprungsfrequenz landen. Ist ihre Amplitude genau
+                    $\frac{1}{2}$ mal so groß wie die Original Amplitude. Mit diesem Wissen können wir das demodulierte
+                    Signal einfach verdoppel.\\
+                    Bei dem Dreieck- und dem Rechtecksignal klappt diese Methode recht gut.  Das Cosinussignal ist
+                    leider immer noch zu klein in der Amplitude. In diesem Fall ist vermutlich wieder die Feinjustierung
+                    des Tiefpasses dafür verantwortlich.\\
+                    Es lässt sich sagen, dass die Methode der Amplitudenmodulation funktioniert.
+                    		
+		\end{quote}
     \end{quote}
 \end{quote}
 
