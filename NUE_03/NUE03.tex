@@ -593,10 +593,10 @@
     \subsection{Vorbereitungsaufgabe}
     \begin{quote}
         Wie schon bei der Amplitudenmodulation  haben wir ein moduliertes Signal erstellt, welches wir später mit einem
-        gemessenen Signal zuvergleichen. Dazu haben wir ein Cosinussignal mit einer Frequenz von
+        gemessenen Signal vergleichen. Dazu haben wir ein Cosinussignal mit einer Frequenz von
         $1kHz$ und einer Amplitude von $1V$ erzeugt. Anschließend haben wir das Frequenz modulierte Signal mit dem
-        vorher erstellen Cosinussignal als Nutzsignal.\\
-        Dieses haben wir abschließend geplottet.
+        vorher erstellen Cosinussignal als Nutzsignal erzeugt.\\
+        Dieses modulierte Signal haben wir abschließend geplottet.
     \end{quote}
     
     \subsection{Durchführung}
@@ -612,12 +612,12 @@
         $\approx \frac{2}{3}$ des Maximalwerts gedreht.\\
         Als nächstes wurde das Spektrum des FM-Signals untersucht und die
         Trägerfrequenz $f_c$ sowie die Proportionalitätskonstante $K_{FM}$
-        bestimmt. Für die Proportionalitätskonstante gilf folgende Formel:
+        bestimmt. Für die Proportionalitätskonstante gilt folgende Formel:
         
         \begin{equation*}
     	\begin{split}
     		K_{FM} &= \frac{2 \pi \Delta f_{max}}{A_u}\\
-			\Delta f_{max} \approx \frac{1}{2} (\frac{1}{T_{min}} - \frac{1}{T_{max}})    		
+			\Delta f_{max} &\approx \frac{1}{2} (\frac{1}{T_{min}} - \frac{1}{T_{max}})    		
     	\end{split}
     	\end{equation*}
     	
@@ -633,33 +633,25 @@
         
         \subsubsection{FM-Demodulation}
         \begin{quote}
-        Für die folgende FM-Demodulation wurde zunächst die Einstellungen des
-        VCO-Moduls verändert. Der Schalter wurde auf HIGH gelegt (nun kann das
-        Trägersignal höhere Nutzfrequenzen als $17 kHz$ modulieren), sowie der
-        Trägerfrequenz-Drehknopf auf die Hälfte und der GAIN-Drehknopf auf $70
-        \%$ eingestellt. Das neu FM-modulierte Sinussignal, mit ursprünglich
-        $100 Hz$-Frequenz und $1 V$-Amplitude, wurde dann auf den Eingang des
-        Comparator-Moduls gelegt und mit einer Referenzspannung von $0 V$
-        verglichen.\\
+        Für die folgende FM-Demodulation wurde zunächst die Einstellungen des VCO-Moduls verändert. Der Schalter wurde
+        auf HIGH gelegt (nun kann das Trägersignal Nutzfrequenzen zwischen $60 kHz$ und $140 kHz$ modulieren), sowie der
+        Trägerfrequenz-Drehknopf auf die Hälfte und der GAIN-Drehknopf auf $70 \%$ eingestellt. Das neu FM-modulierte
+        Sinussignal, mit ursprünglich $100 Hz$-Frequenz und $1 V$-Amplitude, wurde dann auf den Eingang des
+        Comparator-Moduls gelegt und mit einer Referenzspannung von $0 V$ verglichen.\\
         
-        Die FM-Demodulation erfolgt in diesem Praktikum durch eine
-        FM-PFM-Umwandlung (PFM = Pulsfrequenzmodulation). Dabei wandelt der
-        Comparator das analoge Signal in ein Standard-Digitalsignal um. Dieses
-        besteht aus einer polaren Rechteckfolge, welche dadurch entsteht, dass
-        der Comparator jedesmal, wenn das Analogsignal (in diesem Fall der
-        von uns verwendete Sinus) das Referenzsignal übersteigt, einen positiven
-        Ausgangssignalpegel ausgibt. Wird das Analogsignal kleiner als die
-        Referenzspannung wird der Ausgangssignalpegel negativ. Dieses digitale
-        Signal wird in den Twin Pulse Generator (TPG) geführt, der aus jeder
-        steigenden Flanke ein Rechteckimpuls verwirklicht. Dafür werden die
-        Regler DELAY und WIDTH auf ihr Minimum gedreht. Die Pulse des
-        entstandenen Rechtecksignals werden abschließend wieder zu einem kontinuierlichen 
-        Signalpegel umgewandelt, indem sie durch einen Tiefpass
-        (TP) geführt werden.\\
+        Die FM-Demodulation erfolgt in diesem Praktikum durch eine FM-PFM-Umwandlung (PFM = Pulsfrequenzmodulation).
+        Dabei wandelt der Comparator das analoge Signal in ein Standard-Digitalsignal um. Dieses besteht aus einer
+        polaren Rechteckfolge, welche dadurch entsteht, dass der Comparator jedesmal, wenn das Analogsignal (in diesem
+        Fall der von uns verwendete Sinus) das Referenzsignal übersteigt, einen positiven Ausgangssignalpegel ausgibt.
+        Wird das Analogsignal kleiner als die Referenzspannung wird der Ausgangssignalpegel negativ. Dieses digitale
+        Signal wird in den Twin Pulse Generator (TPG) geführt, der aus jeder steigenden Flanke ein Rechteckimpuls
+        verwirklicht. Dafür werden die Regler DELAY und WIDTH auf ihr Minimum gedreht. Durch diese Rechteckimpule werden
+        quasi die Nulldurchgänge gezählt. Und in diesen Nulldurchgängen steckt weiterhin die Information über die
+        Frequenz des Signals. Die Pulse des entstandenen Rechtecksignals werden abschließend wieder zu einem
+        kontinuierlichen Signalpegel umgewandelt, indem sie durch einen Tiefpass (TP) geführt werden.\\
         
-        In der Auswertung vergleichen wir zusätzlich die das Sinusquellsignal
-        mit dem Comparator-Ausgang, das Sinusquellsignal mit dem Twin Pulse
-        Generator-Ausgang und den Comparator-Ausgang mit dem Twin Pulse
+        In der Auswertung vergleichen wir zusätzlich das Sinusquellsignal mit dem Comparator-Ausgang, das
+        Sinusquellsignal mit dem Twin Pulse Generator-Ausgang und den Comparator-Ausgang mit dem Twin Pulse
         Generator-Ausgang.
          
         \end{quote}
@@ -673,7 +665,8 @@
         $3 kHz$ und der Amplitude $1 V$ erhielten wir folgendes Zeitsignal.
     	
              \begin{figure}[H] \centering
-                    \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm 8.5cm,
+                   
+                    \includegraphics[scale=0.5, trim = 3cm 8.5cm 3.5cm 8.5cm,
                     clip]{./Bilder/fm_sinus(3kHz)}
                         \caption{frequenzmoduliertes Sinusnutzsignal (3kHz)}
                 \end{figure}
@@ -681,64 +674,50 @@
         Das Verhältnis dieser beiden Signale wurde mit dem Oszilloskop genauer
         untersucht um die Proportionalitätskonstante berechnen zu können. Dafür
         zoomten wir einmal in einen passenden Bereich, wo die Amplitude des
-        Nutzsignals hoch war und einmal in einen passenden Bereich, wo die
-        Amplitude des Nutzsignals niedrig war.
+        Nutzsignals ihr maximum hatte und einmal in einen passenden Bereich, wo die
+        Amplitude des Nutzsignals ihr minimum hatte.
         
-         
-                \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-14em}
-                \begin{minipage}{0.6\textwidth}
-
                     \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/aufgabe_4_12_sinus_high-ampl}
+                        \label{fig:}                    
+                        \includegraphics[scale=0.2, trim = 0cm 1.5cm 0cm
+                        2.5cm, clip]{./Bilder/aufgabe_4_12_sinus_high-ampl}
                         %FIXME [width=640px, height=474px]
-                        \caption{hohe Amplitude des Nutzsignals zur
+                        \caption{max Amplitude des Nutzsignals zur
                         Periodendauerbestimmung (Tmin) des FM-Empfangssignals}
                     \end{figure}
 
-                \end{minipage}
-                \begin{minipage}{0.6\textwidth}
-
                      \begin{figure}[H]
                         \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/aufgabe_4_12_sinus_low-ampl}
+                        \includegraphics[scale=0.2, trim = 0cm 1.5cm 0cm
+                        2.5cm, clip]{./Bilder/aufgabe_4_12_sinus_low-ampl}
                         %FIXME [width=640px, height=474px]
-                        \caption{niedrige Amplitude des Nutzsignals zur
+                        \caption{min Amplitude des Nutzsignals zur
                         Periodendauerbestimmung (Tmax) des FM-Empfangssignals}
                     \end{figure}
-               \vspace{-1.5em}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
+                   \vspace{-1.5em}
         
         Bei der ersten Messung erhielten wir eine $T_{min}$ von ungefähr 
         $84\mu s$, bei der zweiten Messung waren es für $T_{max}$ ungefähr 
         $120\mu s$. Mit diesen Werten können wir zunächst das $\Delta f_{max}$
-        berechnen, womit dich dann auch das $K_{FM}$ (mit $A_u = 1V$) berechnen
+        berechnen, womit sich dann auch das $K_{FM}$ (mit $A_u = 1V$) berechnen
         lässt.
         
       \begin{equation*}
        \begin{split}
 		\Delta f_{max} &\approx \frac{1}{2} (\frac{1}{84\mu s} - \frac{1}{120\mu s})\\
 					   &\approx 1.786 kHz \\
-		\\			
-			
+		\\		
 	    K_{FM} &= \frac{2 \pi \cdot 1.786 kHz}{1 V}\\
 	    	   &= 11221.768    		
        \end{split}
      \end{equation*}
+     
+     \TODO{ist ein solch hoher wert von KFM realistisch?}
         
         Somit beträgt unser Proportionalitätsfaktor $K_{FM} = 11221.768$.\\
         
         Für die Berechnung der Trägerfrequenz wird folgendes getan\ldots 
-        (müssen wir auf jeden Fall noch ergänzen) 
+       \TODO{müssen wir auf jeden Fall noch ergänzen} 
         
         Um einen Vergleich anstellen zu können, wurde auch das Spektrum des
         Sinussignals mit $1 kHz$ Frequenz aufgenommen. Die Ergebnisse folgen
@@ -747,14 +726,14 @@
                 \begin{center}
             \begin{tabular}{ll}
 
-            \hspace{-14em}
+            \hspace{-10em}
                 \begin{minipage}{0.6\textwidth}
 
                     \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/spektrum_sin3kHz}
+                        \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/spektrum_sin3kHz}
                         %FIXME [width=640px, height=474px]
+               
                         \caption{Spektrum für das Nutzsignal (3kHz, 1V)}
                     \end{figure}
 
@@ -762,9 +741,8 @@
                 \begin{minipage}{0.6\textwidth}
 
                      \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/spektrum_sin1kHz}
+                        \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/spektrum_sin1kHz}
                         %FIXME [width=640px, height=474px]
                         \caption{Spektrum für das Nutzsignal (1kHz, 1V)}
                     \end{figure}
@@ -774,8 +752,10 @@
 
             \end{tabular}
             \end{center}
+        \vspace{1em}
         
-        An den Spektren kann man sehen\ldots
+        An den Spektren kann man sehen \ldots \\
+        \TODO{noch zu ergänzen}
         
         Um die Auswirkung von Frequenz und Amplitude genauer untersuchen zu
         können, führten wir noch weitere Sinusnutzsignal-Messungen durch mit den
@@ -785,13 +765,13 @@
                \begin{center}
             \begin{tabular}{ll}
 
-            \hspace{-14em}
+            \hspace{-10em}
                 \begin{minipage}{0.6\textwidth}
 
                     \begin{figure}[H]
                         \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/sin_a05_f50}
+                        \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/sin_a05_f50}
                         %FIXME [width=640px, height=474px]
                         \caption{Spektrum für Sinusnutzsignal (0.5V, 50Hz)}
                     \end{figure}
@@ -801,8 +781,8 @@
 
                      \begin{figure}[H]
                         \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/sin_a05_f100}
+                        \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/sin_a05_f100}
                         %FIXME [width=640px, height=474px]
                         \caption{Spektrum für Sinusnutzsignal (0.5V, 100Hz)}
                     \end{figure}
@@ -818,13 +798,13 @@
                    \begin{center}
             \begin{tabular}{ll}
 
-            \hspace{-14em}
+            \hspace{-10em}
                 \begin{minipage}{0.6\textwidth}
 
                     \begin{figure}[H]
                         \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/sin_a05_f200}
+                        \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/sin_a05_f200}
                         %FIXME [width=640px, height=474px]
                         \caption{Spektrum für moduliertes Sinusnutzsignal (0.5V,
                         200Hz)}
@@ -835,8 +815,8 @@
 
                      \begin{figure}[H]
                         \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/sin_a1_f50}
+                        \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/sin_a1_f50}
                         %FIXME [width=640px, height=474px]
                         \caption{Spektrum für moduliertes Sinusnutzsignal (1V,
                         50Hz)}
@@ -853,13 +833,13 @@
         	       \begin{center}
             \begin{tabular}{ll}
 
-            \hspace{-14em}
+            \hspace{-10em}
                 \begin{minipage}{0.6\textwidth}
 
                     \begin{figure}[H]
                         \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/sin_a1_f100}
+                        \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/sin_a1_f100}
                         %FIXME [width=640px, height=474px]
                         \caption{Spektrum für moduliertes Sinusnutzsignal (1V,
                         100Hz)}
@@ -870,8 +850,8 @@
 
                      \begin{figure}[H]
                         \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/sin_a1_f200}
+                        \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/sin_a1_f200}
                         %FIXME [width=640px, height=474px]
                         \caption{Spektrum für moduliertes Sinusnutzsignal (1V,
                         200Hz)}
@@ -888,13 +868,13 @@
                \begin{center}
             \begin{tabular}{ll}
 
-            \hspace{-14em}
+            \hspace{-10em}
                 \begin{minipage}{0.6\textwidth}
 
                     \begin{figure}[H]
                         \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/sin_a2_f50}
+                        \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/sin_a2_f50}
                         %FIXME [width=640px, height=474px]
                         \caption{Spektrum für moduliertes Sinusnutzsignal (2V,
                         50Hz)}
@@ -905,8 +885,8 @@
 
                      \begin{figure}[H]
                         \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm
-                        8.5cm, clip]{./Bilder/sin_a2_f100}
+                        \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/sin_a2_f100}
                         %FIXME [width=640px, height=474px]
                         \caption{Spektrum für moduliertes Sinusnutzsignal (2V,
                         100Hz)}
@@ -921,8 +901,8 @@
             %Vierte Reihe mit nur einem Bild
             
              \begin{figure}[H] \centering
-                    \includegraphics[scale=0.5, trim = 2cm 6.5cm 1.5cm 8.5cm,
-                    clip]{./Bilder/sin_a2_f200}
+                    \includegraphics[scale=0.5, trim = 4cm 9.5cm 3.5cm
+                        9.5cm, clip]{./Bilder/sin_a2_f200}
                         \caption{Spektrum für moduliertes Sinusnutzsignal (2V,
                         200Hz)}
                 \end{figure}
