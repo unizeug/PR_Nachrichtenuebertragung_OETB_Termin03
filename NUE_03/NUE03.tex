@@ -937,14 +937,23 @@
            An diesem Ergebnis können wir sehen, dass der TPG-Ausgang und der
            Comp-Ausgang fast das gleiche Signal liefern. Auch dies entspricht
            unseren Erwartungen, da der TPG bei jeder steigenden Flanke ein
-           Rechteckimpuls ausgibt, also quasi aus einem Rechteck ein weiteres
-           Rechteck macht. Ein kleiner Unterschied ist aber im Delay bemerkbar.
-           Da der TPG erst nach dem Comparator vom Signal durchlaufen wird, ist
+           einzelnes Deltaimpuls ausgibt. Ungefähr $8ms$ nach diesem Deltaimpuls
+           wird ein weiterer Deltaimpuls ausgegeben (daher Twin-Pulse). Grafisch
+           dargestellt sieht dies auf dem Oszilloskop wie ein Rechtecksignal
+           aus. Dass die Rechtecke des Comparator und die quasi Rechtecke Des
+           TPG ca. die gleiche Breite aufweisen, ist ein Zufall, dass durch die
+           Frequenz des Sendesignals entstanden ist. Daher macht es grafisch
+           den Eindruck, dass der TPG ein Rechtecksignal über das
+           Rechtecksignal des Comparators legt. Ein kleiner Unterschied ist aber
+           im Delay bemerkbar.
+           Da der TPG erst nach dem Comp vom Signal durchlaufen wird, ist
            dieses kleine Delay zwischen festem Sendesignal und dem
            TPG-Ausgangssignal nicht überraschend.\\
            
-           Das der Comparator und der TPG fast das gleiche Signal ausgeben wird
-           nochmal im Vergleich ihrer Ausgangssignale deutlich:
+           \vspace{0.5em}
+           
+           Dass der Comparator und der TPG fast das gleiche Signal ausgeben,
+           wird nochmal im Vergleich ihrer Ausgangssignale deutlich:
            
             
              \begin{figure}[H] \centering
@@ -957,7 +966,9 @@
           Man kann deutlich sehen, dass beide Ausgänge einen sehr ähnlichen
           Verlauf haben, der TPG aber manchmal nicht mit dem Comp-Ausgang
           mitkommt und eine steigende Flanke überspringen kann, wodurch eine
-          Störung in der Rechteckperiode entstehen kann.\\
+          Störung in der Rechteckperiode entsteht.\\
+          
+          \vspace{0.5em}
           
           Zuletzt wurde das Sendesignal mit fester Frequenz in den Vergleich mit
           dem moduliert-demoduliertem Signal gesetzt. Das folgende Ergebnis kam
@@ -971,10 +982,19 @@
                         demoduliertem Empfangssignal}
                 \end{figure}
           
-        Das demodulierte Signal besitzt einen Offset und keine sehr klaren
-        Sinusverlauf. Daraus lässt sich schließen, dass die FM-PFM-Umwandlung
+        Das demodulierte Signal besitzt einen Offset, keine korrekte Amplitude 
+        und keinen sehr klaren Sinusverlauf. Diese Fehler können hauptsächlich
+        dadurch entstehen, dass in unserer langen Kette an Modulen für die
+        Demodulation bei jedem Schritt ein teil der Amplitude verloren gehen
+        kann. Dies geschieht zum Beispiel, wenn durch die hohe
+        Sendesignalfrequenz der Comparator und der TPG steigende Flanken
+        verpassen und kein korrektes Ausgangssignal weitergeben. Somit kann sich
+        der Fehler in den weiteren Modulen fortsetzen und vergrößern, was sich
+        dann am demodulierten Empfangssignal bemerkbar macht.\\
+               
+        Daraus lässt sich schließen, dass die FM-PFM-Umwandlung
         für eine FM-Demodulation eines Sinussignals nicht sehr geeignet ist.\\
-        (müssen wir hier mehr dazu schreiben??)
+        
     	\end{quote}
     \end{quote}	
 \end{quote}
