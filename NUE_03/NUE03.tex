@@ -982,25 +982,30 @@
                         \caption{Vergleich zwischen festem Sendesignal und
                         Signalverlauf am TPG}
                 \end{figure}
-           
-           
-           \TODO{TPG genauer erklären}
-           
+                
+                
            An diesem Ergebnis können wir sehen, dass der TPG-Ausgang und der
            Comp-Ausgang fast das gleiche Signal liefern. Auch dies entspricht
            unseren Erwartungen, da der TPG bei jeder steigenden Flanke ein
-           einzelnes Deltaimpuls ausgibt. Ungefähr $8ms$ nach diesem Deltaimpuls
-           wird ein weiterer Deltaimpuls ausgegeben (daher Twin-Pulse). Grafisch
-           dargestellt sieht dies auf dem Oszilloskop wie ein Rechtecksignal
-           aus. Dass die Rechtecke des Comparator und die quasi Rechtecke Des
-           TPG ca. die gleiche Breite aufweisen, ist ein Zufall, dass durch die
-           Frequenz des Sendesignals entstanden ist. Daher macht es grafisch
-           den Eindruck, dass der TPG ein Rechtecksignal über das
-           Rechtecksignal des Comparators legt. Ein kleiner Unterschied ist aber
-           im Delay bemerkbar.
-           Da der TPG erst nach dem Comp vom Signal durchlaufen wird, ist
-           dieses kleine Delay zwischen festem Sendesignal und dem
-           TPG-Ausgangssignal nicht überraschend.\\
+           einzelnes Deltaimpuls ausgibt. Der TPG gibt zwei Deltaimpulse mit
+           einer bestimmten Länge aus, wenn er eine steigende Flanke erkennt.
+           Der erste Impuls wird an den Ausgang Q$1$ und der zweite Impuls an
+           Q$2$ ausgegeben. Zwischen den beiden Impulsen wird eine weitere
+           bestimmte Zeit gewartet. Da wir den Q$2$ Ausgang des
+           TPG verwendet haben, betrug die Zeitdauer nach der erkannten
+           steigenden Flanke laut Handbuch $40\mu s$ bis der Deltaimpuls von
+           einer Breite von $5\mu s$ an den besagten Ausgang ausgegeben wurde (bei Q$1$ gibt
+           es keinen Verzögerungdauer).
+           Grafisch dargestellt sieht dies auf dem Oszilloskop wie ein
+           normales periodisches Rechtecksignal aus. Dass die Rechtecke des
+           Comparator und die Rechtecke Des TPG ca. die gleiche Breite aufweisen, ist ein Zufall, 
+           dass durch die Frequenz des Sendesignals entstanden ist. Daher macht es 
+           grafisch den Eindruck, dass der TPG ein Rechtecksignal über das Rechtecksignal des Comparators 
+           legt. Ein kleiner Unterschied ist aber im Delay bemerkbar.\\
+           Da nur der TPG-Ausgang Q$2$ verwendet wurde, dauert es wie bereits
+           erwähnt $40\mu s$ bis das Rechteck ausgegeben wird. Im Vergleich zu
+           dem Sendesignal ist diese Verzögerung deutlicher sichtbar als nur im
+           Vergleich zu dem Ausgangssignal des Comparators. 
            
            \vspace{0.5em}
            
@@ -1056,7 +1061,39 @@
 
 \section{Zusammenfassung}
 \begin{quote}
+	Das Praktikum über die Amplituden- und die Frequenzmodulation hat für
+	uns bewiesen, dass diese Arten der Modulation und Demodulation praktisch
+	realisierbar sind.
+	Wir konnten vieles aus der Theorie besser nachvollziehen und ein Gefühl für die
+	Verwirklichungen der AM und FM gewinnen. Dennoch gab es einige Schwierigkeiten.
+	Unter anderem konnten wir zunächst bei der AM, welche für uns theoretisch und
+	praktisch einfacher zu verstehen und bearbeiten war, nicht verstehen, warum
+	unser demoduliertes Signal so sehr von dem verwendeten Nutzsignal abwich.
+	Später konnten wir es uns, wie bereits erwähnt, damit erklären, dass es
+	eventuell an der Tiefpasseinstellung lag und wir das Gain falsch an das
+	Empfangssignal angepasst haben.
 	
+	\vspace{0.5em}
+	
+	Bei der FM, welche in jeder Hinsicht eine größere Herausforderung für uns
+	dargestellt hat, konnten wir vor allem bei der Auswertung unserer Messungen
+	viel über das Verhältnis von Nutz- und Trägersignal zu den entstehenden
+	Spektren lernen. Die durchzuführende Art der FM-Demodulation anhand einer
+	FM-PFM Umwandlung ließ uns intensiver mit der Funktionsweise von Comparator,
+	Twin-Pulse-Generator und dem Tiefpass beschäftigen. Unsere Erkenntnisse aus
+	diesem Teil des Praktikum erhielten wir vor allem beim Vergleich
+	unterschiedlicher Modulausgänge miteinander.
+	
+	\vspace{0.5em}
+	
+	Insgesamt hat uns dieser Termin gezeigt, dass man die einzelnen
+	Schritte, die ein Signal während der Modulation oder der Demodulation
+	durchläuft, vollständig verstehen muss, um eine praktische Verwirklichung zu
+	realisieren.\\
+	Außerdem haben wir festgestellt, dass für diese Realisierung außer dem
+	theoretischem Wissen auch viel Aufmerksamkeit und Verständnis für die Arbeitsweise 
+	der verwendeten Bauteile erfordert wird.
+
 \end{quote}
 
 %--------------------------------------------------------------------
