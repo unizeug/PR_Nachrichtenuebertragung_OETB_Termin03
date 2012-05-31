@@ -147,9 +147,10 @@
                     \cite{AMohneUeber}
             \end{figure}
              
-             Damit diese Modulation jedoch Fehlerfrei funktioniert wird am Empfänger das kohärente Trägersignal
-             benötigt. Das Bedeutet, dass das Trägersignal in exakt der selben Phase und Frequenz am Empfänger vorhanden
-             sein muss. Ist das nicht der Fall kommt es zur Verfälschung des Nutzsignals bei der Demodulation.\\
+             Damit diese Modulation jedoch fehlerfrei funktioniert wird am
+             Empfänger das kohärente Trägersignal benötigt. Das Bedeutet, dass das Trägersignal in exakt der 
+             selben Phase und Frequenz am Empfänger vorhanden sein muss. 
+             Ist das nicht der Fall kommt es zur Verfälschung des Nutzsignals bei der Demodulation.\\
              Da das jedoch schwer zu realisieren ist wurde die zweite art der Amplitudenmodulation entwickelt:
              die Amplitudenmodulation mit Träger.
              
@@ -438,8 +439,9 @@
                     ähnlicher geworden. Es unterscheidet sich noch durch einen Verstärkungsfaktor sowie die höheren
                     Frequenzen des Trägersignals von dem originalsignal.\vspace{1em}
                     
-                    Der Verstärkungsfaktor von $4$ basiert auf der multiplikation, die für die Amplitudenmodulation
-                    benötigt wird. Der maximalwert des Nutzsignals von $2V$ wird zuerst bei der Modulation und später
+                    Der Verstärkungsfaktor von $4$ basiert auf der
+                    Multiplikation, die für die Amplitudenmodulation benötigt wird. 
+                    Der Maximalwert des Nutzsignals von $2V$ wird zuerst bei der Modulation und später
                     bei der Demodulation mit den $2V$ des Trägersignals multipliziert. Daher der Spitzenwert von $8V$
                     bei dem demodulierten Signal.\\
                     
@@ -448,9 +450,9 @@
 		
 		\subsubsection{demodulierte Signale mit Tiefpass}
 		\begin{quote}
-                    Um die durch die modulation entstehenden oberwellen wieder von dem Demodulierten Signal zu
-                    trennen wird das Signal noch einmal Tiefpassgefiltert. Ein solcher Tiefpass ist schon auf dem
-                    Trainingsbrett vorhanden.\\
+                    Um die durch die Modulation entstehenden Oberwellen wieder von dem demodulierten Signal zu
+                    trennen, wird das Signal noch einmal tiefpassgefiltert. Ein
+                    solcher Tiefpass ist schon auf dem Trainingsbrett vorhanden.\\
                     Der TP wurde dabei manuell so eingestellt, bis das Ergebniss ungefähr 
                     den Erwartungen des Sendesignals entsprach. Dabei maßen wir
                     mithilfe des Oszilloskops die jeweiligen Periodendauer von den
@@ -595,6 +597,10 @@
     
     \subsection{Vorbereitungsaufgabe}
     \begin{quote}
+        Um ein Frequenzmoduliertes Signal zu simulieren, welches wir später mit einem gemessenen Signal zuvergleichen,
+        erzeugen wir ein Cosinussignal mit einer Frequenz von $1kHz$ und einer
+        Amplitude von $1V$. Anschließend\ldots
+        (was fehlt hier noch?)
         Wie schon bei der Amplitudenmodulation  haben wir ein moduliertes Signal erstellt, welches wir später mit einem
         gemessenen Signal vergleichen. Dazu haben wir ein Cosinussignal mit einer Frequenz von
         $1kHz$ und einer Amplitude von $1V$ erzeugt. Anschließend haben wir das Frequenz modulierte Signal mit dem
@@ -663,7 +669,10 @@
     
     \subsection{Auswertung}
     \begin{quote}
-    
+    	
+    	\subsubsection{Signalerzeugung und Modulation}
+    	\begin{quote}
+    	
         Nach der Frequenzmodulation des Sinusnutzsignals mit der Frequenz 
         $3 kHz$ und der Amplitude $1 V$ erhielten wir folgendes Zeitsignal.
     	
@@ -677,8 +686,8 @@
         Das Verhältnis dieser beiden Signale wurde mit dem Oszilloskop genauer
         untersucht um die Proportionalitätskonstante berechnen zu können. Dafür
         zoomten wir einmal in einen passenden Bereich, wo die Amplitude des
-        Nutzsignals ihr maximum hatte und einmal in einen passenden Bereich, wo die
-        Amplitude des Nutzsignals ihr minimum hatte.
+        Nutzsignals ihr Maximum hatte und einmal in einen passenden Bereich, wo die
+        Amplitude des Nutzsignals ihr Minimum hatte.
         
                     \begin{figure}[H]
                         \label{fig:}                    
@@ -755,7 +764,6 @@
 
             \end{tabular}
             \end{center}
-        \vspace{1em}
         
         An den Spektren kann man sehen \ldots \\
         \TODO{noch zu ergänzen}
@@ -911,10 +919,10 @@
                 \end{figure}
             
             
-            An den Unterschiedlichen Spektren lässt sich eine Tendenz entdecken.
-            Beispielsweise an den Spektren mit der Eingangssignalamplitude $0.5
-            V$. Dabei öässt sich erkennen, dass die Amplitude der Impulse im
-            Betragsspektrum höher mit wachsender Frequenz höher werden. An der
+            An den Unterschiedlichen Spektren lässt sich eine Tendenz
+            entdecken. Beispielsweise an den Spektren mit der
+            Eingangssignalamplitude $0.5 V$. Dabei lässt sich erkennen, dass die Amplitude 
+            der Impulse im Betragsspektrum mit wachsender Frequenz höher werden. An der
             Stelle in der Frequenzachse ändert sich dabei nichts. Die gleiche
             Beobachtung kann man auch mit der Messreihe der Nutzsignale mit der
             Amplitude $1V$ und $2V$ machen. Die wachsende Amplitude dagegen
@@ -923,6 +931,11 @@
             dass die steigende Amplitude des Nutzsignals im modulierten Spektrum
             zu einer höheren Amplitude und die wachsende Frequenz zu einem
             breiteren Freuquenzband führt.
+           
+       \end{quote}
+            
+  	     \subsubsection{FM-Demodulation}
+           \begin{quote}
             
             Bei der FM-Demodulation wurde das Comparator- und das Twin Pulse
             Generator-Modul eingesetzt. Die Funktion beider Module wurde bereits
@@ -938,11 +951,14 @@
                     clip]{./Bilder/sin_vs_comp}
                         \caption{Vergleich zwischen festem Sendesignal und
                         Signalverlauf am Comparator}
-                \end{figure}
+                \end{figure}          
+            
+
+           
             
            Hier kann man sehr genau die Funktion des Comparator erkennen. Da wir
-           einen Sinus ohne Offste verwenden und die verwendete Referenzspannung
-           $0V$ beträgt, wird der Comp-Ausgang wie erwartet auf das high Signalm 
+           einen Sinus ohne Offset verwenden und die verwendete Referenzspannung
+           $0V$ beträgt, wird der Comp-Ausgang wie erwartet auf das high Signal 
            gesetzt, sobald das Sendesignal vom negativen in den positiven
            Bereich übergeht. Im umgekehrten Fall wird der Comp-Ausgang auf low
            gesetzt. Somit entspricht diese Messung unseren Erwartungen.\\
@@ -956,17 +972,29 @@
                         Signalverlauf am TPG}
                 \end{figure}
            
+           
+           \TODO{TPG genauer erklären}
+           
            An diesem Ergebnis können wir sehen, dass der TPG-Ausgang und der
            Comp-Ausgang fast das gleiche Signal liefern. Auch dies entspricht
            unseren Erwartungen, da der TPG bei jeder steigenden Flanke ein
-           Rechteckimpuls ausgibt, also quasi aus einem Rechteck ein weiteres
-           Rechteck macht. Ein kleiner Unterschied ist aber im Delay bemerkbar.
-           Da der TPG erst nach dem Comparator vom Signal durchlaufen wird, ist
+           einzelnes Deltaimpuls ausgibt. Ungefähr $8ms$ nach diesem Deltaimpuls
+           wird ein weiterer Deltaimpuls ausgegeben (daher Twin-Pulse). Grafisch
+           dargestellt sieht dies auf dem Oszilloskop wie ein Rechtecksignal
+           aus. Dass die Rechtecke des Comparator und die quasi Rechtecke Des
+           TPG ca. die gleiche Breite aufweisen, ist ein Zufall, dass durch die
+           Frequenz des Sendesignals entstanden ist. Daher macht es grafisch
+           den Eindruck, dass der TPG ein Rechtecksignal über das
+           Rechtecksignal des Comparators legt. Ein kleiner Unterschied ist aber
+           im Delay bemerkbar.
+           Da der TPG erst nach dem Comp vom Signal durchlaufen wird, ist
            dieses kleine Delay zwischen festem Sendesignal und dem
            TPG-Ausgangssignal nicht überraschend.\\
            
-           Das der Comparator und der TPG fast das gleiche Signal ausgeben wird
-           nochmal im Vergleich ihrer Ausgangssignale deutlich:
+           \vspace{0.5em}
+           
+           Dass der Comparator und der TPG fast das gleiche Signal ausgeben,
+           wird nochmal im Vergleich ihrer Ausgangssignale deutlich:
            
             
              \begin{figure}[H] \centering
@@ -979,7 +1007,9 @@
           Man kann deutlich sehen, dass beide Ausgänge einen sehr ähnlichen
           Verlauf haben, der TPG aber manchmal nicht mit dem Comp-Ausgang
           mitkommt und eine steigende Flanke überspringen kann, wodurch eine
-          Störung in der Rechteckperiode entstehen kann.\\
+          Störung in der Rechteckperiode entsteht.\\
+          
+          \vspace{0.5em}
           
           Zuletzt wurde das Sendesignal mit fester Frequenz in den Vergleich mit
           dem moduliert-demoduliertem Signal gesetzt. Das folgende Ergebnis kam
@@ -993,10 +1023,20 @@
                         demoduliertem Empfangssignal}
                 \end{figure}
           
-        Das demodulierte Signal besitzt einen Offset und keine sehr klaren
-        Sinusverlauf. Daraus lässt sich schließen, dass die FM-PFM-Umwandlung
+        Das demodulierte Signal besitzt einen Offset, keine korrekte Amplitude 
+        und keinen sehr klaren Sinusverlauf. Diese Fehler können hauptsächlich
+        dadurch entstehen, dass in unserer langen Kette an Modulen für die
+        Demodulation bei jedem Schritt ein teil der Amplitude verloren gehen
+        kann. Dies geschieht zum Beispiel, wenn durch die hohe
+        Sendesignalfrequenz der Comparator und der TPG steigende Flanken
+        verpassen und kein korrektes Ausgangssignal weitergeben. Somit kann sich
+        der Fehler in den weiteren Modulen fortsetzen und vergrößern, was sich
+        dann am demodulierten Empfangssignal bemerkbar macht.\\
+               
+        Daraus lässt sich schließen, dass die FM-PFM-Umwandlung
         für eine FM-Demodulation eines Sinussignals nicht sehr geeignet ist.\\
-        (müssen wir hier mehr dazu schreiben??)
+        
+    	\end{quote}
     \end{quote}	
 \end{quote}
 
@@ -1021,8 +1061,6 @@ Nachrichtenübertragung, S.209
 Nachrichtenübertragung, S.206
 \bibitem {AMmitUeber} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
 Nachrichtenübertragung, S.215
-\bibitem {Modulatorkennlinie} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
-Nachrichtenübertragung, S.235
 
 
 
