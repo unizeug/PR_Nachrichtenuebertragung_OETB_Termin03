@@ -503,6 +503,8 @@
                             \caption{AM-demoduliertes und
                             TP-gefiltertes Rechtecksignal}
                     \end{figure}
+                    
+                    \TODO{Boris: Gain}
     
 
                     
@@ -518,8 +520,12 @@
                     $\frac{1}{2}$ mal so groß wie die Original Amplitude. Mit diesem Wissen können wir das demodulierte
                     Signal einfach verdoppel.\\
                     Bei dem Dreieck- und dem Rechtecksignal klappt diese Methode recht gut.  Das Cosinussignal ist
-                    leider immer noch zu klein in der Amplitude. In diesem Fall ist vermutlich wieder die Feinjustierung
-                    des Tiefpasses dafür verantwortlich.\\
+                    leider immer noch zu klein in der Amplitude. Da uns dieser Fehler erst bei der Auswertung
+                    aufgefallen ist lässt sich jetzt nur noch über die Ursache spekulieren. Da in der gesamten
+                    Kette der Molation und der Demodulation lediglich beim Tiefpass die Amplitude verringert
+                    wird ist dort der Fehler zu suchen. Vermutlich haben wir fälschlicherweise den Gain
+                    verstellt.\\
+                    
                     Es lässt sich sagen, dass die Methode der Amplitudenmodulation funktioniert.
                     		
 		\end{quote}
@@ -726,7 +732,7 @@
         
         Somit beträgt unser Proportionalitätsfaktor $K_{FM} = 11221.768$.\\
         
-        Für die Berechnung der Trägerfrequenz wird folgendes getan\ldots 
+        Für die Berechnung der Trägerfrequenz wird folgendes getan\ldots \\
        \TODO{müssen wir auf jeden Fall noch ergänzen} 
         
         Um einen Vergleich anstellen zu können, wurde auch das Spektrum des
