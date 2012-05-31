@@ -893,7 +893,12 @@
             dass die steigende Amplitude des Nutzsignals im modulierten Spektrum
             zu einer höheren Amplitude und die wachsende Frequenz zu einem
             breiteren Freuquenzband führt.
+           
+       \end{quote}
             
+  	     \subsubsection{FM-Demodulation}
+           \begin{quote}
+      
             Bei der FM-Demodulation wurde das Comparator- und das Twin Pulse
             Generator-Modul eingesetzt. Die Funktion beider Module wurde bereits
             in der Durchführung ausreichend erläutert. Hier werden nun die
@@ -908,16 +913,11 @@
                     clip]{./Bilder/sin_vs_comp}
                         \caption{Vergleich zwischen festem Sendesignal und
                         Signalverlauf am Comparator}
-                \end{figure}
-            
-           \end{quote}
-           
-           \subsubsection{FM-Demodulation}
-           \begin{quote}
+                \end{figure}          
             
            Hier kann man sehr genau die Funktion des Comparator erkennen. Da wir
-           einen Sinus ohne Offste verwenden und die verwendete Referenzspannung
-           $0V$ beträgt, wird der Comp-Ausgang wie erwartet auf das high Signalm 
+           einen Sinus ohne Offset verwenden und die verwendete Referenzspannung
+           $0V$ beträgt, wird der Comp-Ausgang wie erwartet auf das high Signal 
            gesetzt, sobald das Sendesignal vom negativen in den positiven
            Bereich übergeht. Im umgekehrten Fall wird der Comp-Ausgang auf low
            gesetzt. Somit entspricht diese Messung unseren Erwartungen.\\
@@ -930,6 +930,9 @@
                         \caption{Vergleich zwischen festem Sendesignal und
                         Signalverlauf am TPG}
                 \end{figure}
+           
+           
+           \TODO{TPG genauer erklären}
            
            An diesem Ergebnis können wir sehen, dass der TPG-Ausgang und der
            Comp-Ausgang fast das gleiche Signal liefern. Auch dies entspricht
