@@ -79,8 +79,9 @@
         Um Signale an spezielle Kanaleigenschaften anzupassen lassen sich diese Signale durch eine Modulation in
         Amplitude und Frequenz verändern.\\
         Dies hat beispielsweise den Vorteil, dass sich die Signale anschließend mit einer Frequenz
-        übertragen lassen auf der die Rauscheinflüsse geringer sind. Des weiteren entsteht durch Modulation die
-        Möglichkeit mittels Multiplexing mehrere Signale gleichzeitig über einen Kanal zu übertragen und diese im
+        übertragen lassen, auf der die Rauscheinflüsse geringer sind. Des
+        weiteren entsteht durch Modulation die Möglichkeit mittels Multiplexing mehrere Signale gleichzeitig 
+        über einen Kanal zu übertragen und diese im
         nachhinein eindeutig unterscheinden zu können.\\
         Um das Ursprungssignal auf der Empfängerseite nutzen zu können muss es realisierbare Demodulationsmethoden
         geben.
@@ -127,9 +128,9 @@
                     \cite{AMohnetraeger}
             \end{figure}
     
-            Um dieses modulierte Signal am Empfänger wieder zu demodulieren wird es noch ein weiteres mal mit dem
-            Trägersignal multipliziert und anschließend Tiefpassgefiltert. Welche Auswirkung das hat zeigt folgendes
-            Bild.
+            Um dieses modulierte Signal am Empfänger wieder zu demodulieren wird
+            es noch ein weiteres Mal mit dem Trägersignal multipliziert und anschließend Tiefpassgefiltert. 
+            Welche Auswirkung das hat, zeigt folgendes Bild.
             
             \begin{figure}[H]
             \centering
@@ -138,7 +139,7 @@
                     \cite{AMdemodulation}
             \end{figure}
     
-            Die Gesamte Übertragungsstecke der Amplitudenmodulation ohne Träger ist hier zu sehen.
+            Die gesamte Übertragungsstecke der Amplitudenmodulation ohne Träger ist hier zu sehen.
             
             \begin{figure}[H]
             \centering
@@ -147,11 +148,11 @@
                     \cite{AMohneUeber}
             \end{figure}
              
-             Damit diese Modulation jedoch fehlerfrei funktioniert wird am
+             Damit diese Modulation jedoch fehlerfrei funktioniert, wird am
              Empfänger das kohärente Trägersignal benötigt. Das Bedeutet, dass das Trägersignal in exakt der 
              selben Phase und Frequenz am Empfänger vorhanden sein muss. 
              Ist das nicht der Fall kommt es zur Verfälschung des Nutzsignals bei der Demodulation.\\
-             Da das jedoch schwer zu realisieren ist wurde die zweite art der Amplitudenmodulation entwickelt:
+             Da das jedoch schwer zu realisieren ist wurde die zweite Art der Amplitudenmodulation entwickelt:
              die Amplitudenmodulation mit Träger.
              
             
@@ -177,7 +178,7 @@
                 \end{split}
             \end{equation*}
             
-            Diese Art der Modulation hat folgende auswirkungen auf das Signal:
+            Diese Art der Modulation hat folgende Auswirkungen auf das Signal:
             
             \begin{figure}[H]
             \centering
@@ -186,11 +187,12 @@
                     \cite{AMmitUeber}
             \end{figure}
             
-            Für die Demodulation stehen bei diesem Verfahren zwei Möglichkeiten zur verfügung. Einerseits dieselbe
-            Demodulation wie oben schon beschrieben, die erneute multiplikation mit dem Trägersignal.\\
-            Andererseits lässt sich dieses Signal auch demodulieren indem das Signal gleichgerichtet wird und
-            anschließend der Offset entfernt wird Außerdem muss auch dieses Signal Tiefpassgefiltert werden. Der Vorteil
-            dieser zweiten Methode ist, dass sie sehr viel einfacher auf der Empfängerseite zu realisieren ist als die erst 
+            Für die Demodulation stehen bei diesem Verfahren zwei Möglichkeiten zur Verfügung. Einerseits dieselbe
+            Demodulation wie oben schon beschrieben, die erneute Multiplikation mit dem Trägersignal.\\
+            Andererseits lässt sich dieses Signal auch demodulieren, indem das
+            Signal gleichgerichtet wird und anschließend der Offset entfernt
+            wird. Außerdem muss auch dieses Signal Tiefpassgefiltert werden. Der Vorteil dieser zweiten Methode ist, 
+            dass sie sehr viel einfacher auf der Empfängerseite zu realisieren ist als die erst 
             Art der Demodulation.
     
 		      
@@ -207,10 +209,10 @@
         einer Amplitude (von Nulldurchgang zum Spitzenwert) von $1V$, einer Frequenz von $100 Hz$ und einem Offset von
         $1V$ erzeugt.
         Zusätzlich haben wir noch ein Trägersignal mit der selben Amplitude aber mit einer Trägerfrequenz von $2000 Hz$ erstellt.\\
-        Anschließend haben wir die drei Nutzsignale Amplitudenmoduliert indem wir sie jeweils mit dem Tägersignal
-        multipliziert haben.\\
-        Zur Analyse haben abschließende diese modulierten Signale sowie ihre Amplituden- und Phasengänge plotten
-        lassen.\\
+        Anschließend haben wir die drei Nutzsignale amplitudenmoduliert, indem
+        wir sie jeweils mit dem Tägersignal multipliziert haben.\\
+        Zur Analyse haben wir abschließend diese modulierten Signale sowie ihre
+        Amplituden- und Phasengänge plotten lassen.\\
         In der Auswertung werden wir diese Ergebnisse anschließend mit den gemessenen Ergebnissen vergleichen.
     \end{quote}
     
@@ -218,7 +220,7 @@
     \begin{quote}
     	\subsubsection{Signalerzeugung und Modulation}
     	\begin{quote}
-    	Als Basisbandsignal generierten wir ein mittelwertfreier Sinus,
+    	Als Basisbandsignal generierten wir einen mittelwertfreien Sinus,
     	der eine Frequenz von $100 Hz$ und eine Amplitude von $1 V$ besaß. Dazu wurde noch
     	ein Offset von einem Volt addiert, welches wir mit dem Adder-Modul und der
     	Quelle Variable DCV verwirklicht haben. Somit hatte unser Basisbandsignal
@@ -246,9 +248,6 @@
     	Diese Abweichung korrigierten wir anhand eines Tiefpasses nach der
     	Demodulation.
     	
-    	Ist das alles richtig so? was hatte Michael Tok denn gesagt? Auf jeden Fall
-    	haben wir Messwerte zu demodulierten und demoduliert gefilterten Signalen.
-    	Bei den gefilterten sind deutlich kleinere Amplituden zu sehen.
 		\end{quote}    
     
     \end{quote}
@@ -263,7 +262,7 @@
         \subsubsection{modulierte Signale}
 		\begin{quote}
 		  
-		  Wir erwaten bei den drei Signalen nach der modulation das ursprüngliche Nutzsignal in als Einhüllende des
+		  Wir erwaten bei den drei Signalen nach der Modulation das ursprüngliche Nutzsignal in als Einhüllende des
 		  modulierten Signals wiederzufinden. Innerhalb dieser Einhüllenden wird das $2kHz$ Trägersignal zu finden sein.
 		  
             \begin{center}
@@ -368,21 +367,21 @@
                 Verleich zu den gemessenen Signalen auf. Diese unterschiedliche Genauigkeit lässt sich sehr schon an dem
                 Cosinussignal betrachten. Während das simulierte Spektrum ausschließlich $6$ Peaks bei $\pm 2000 Hz$
                 besitzt kann man bei den gemessen Signalen neben diesen $6$ Peaks auch noch diverse andere Frequenzen
-                erkennen. Da diese $6$ entsprechenden Peaks auch bei dem gemessene Signal besonders herausragen lässt
-                sich sagen, dass es sich um die entscheidenden Frequenzen des Spektrums handels. Die weiteren Frequenzen
+                erkennen. Da diese $6$ entsprechenden Peaks auch bei dem
+                gemessene Signal besonders herausragen, lässt sich sagen, dass es sich um die entscheidenden 
+                Frequenzen des Spektrums handelt. Die weiteren Frequenzen
                 sind auf Rauschen, ungenaue Einstellungen und andere Störungen bei der realen Messung zurückzuführen.\\
                 Diese Vermutung wird auch durch das Rechtecksignal verstärkt. Während das simulierte Signal reine
                 Nullabschnitte besitzt sind die entsprechenden Abschnitte bei dem gemessenen Signal durch sichtbare
-                Welligkeit geprägt. Da diese Welligkeit auffallend wie das $2kHz$ Trägersignal aussieht liegt die
-                Vermutung nahe, dass das Nutzsignal nicht exakt auf $0V$ runtergestellt war.
+                Welligkeit geprägt. Da diese Welligkeit auffallend wie das
+                $2kHz$ Trägersignal aussieht, liegt die Vermutung nahe, dass das Nutzsignal nicht exakt auf $0V$ runtergestellt war.
                   
-                
-			
+               
 		\end{quote}
             
         \subsubsection{demodulierte Signale ohne Tiefpass}
 		\begin{quote}
-            Bei der Demodulation wurde das Trägersignal ein zweites mal auf das
+            Bei der Demodulation wurde das Trägersignal ein zweites Mal auf das
             bereits modulierte Nutzsignal multipliziert. Die Synchronität war
             dadurch gewährleistet, dass das selbe Trägersignal wie bei der
             Modulation verwendet wurde.\\
@@ -436,8 +435,9 @@
                     Der Verstärkungsfaktor von $4$ basiert auf der
                     Multiplikation, die für die Amplitudenmodulation benötigt wird. 
                     Der Maximalwert des Nutzsignals von $2V$ wird zuerst bei der Modulation und später
-                    bei der Demodulation mit den $2V$ des Trägersignals multipliziert. Daher der Spitzenwert von $8V$
-                    bei dem demodulierten Signal.\\
+                    bei der Demodulation mit den $2V$ des Trägersignals
+                    multipliziert. Daher entsteht der Spitzenwert von $8V$ bei
+                    dem demodulierten Signal.\\
                     
      			
 		\end{quote}
@@ -452,8 +452,8 @@
                     mithilfe des Oszilloskops die jeweiligen Periodendauer von den
                     Empfangssignalen und konnten mit $T_{Periode}$ rückwirkend die
                     Grenzfrequenzen bestimmen. Dabei verwendeten wir den
-                    Zusammenhang $f = \frac{1}{T}$. Wichtig dabei war es den in dem
-                    TP integrierten Vorfaktor von $100$ zu berücksichtigen, um keine 
+                    Zusammenhang $f = \frac{1}{T}$. Wichtig bei diesem Schritt
+                    war es den in dem TP integrierten Vorfaktor von $100$ zu berücksichtigen, um keine 
                     hundertfache Frequenzen zu erhalten. Es ergab sich für das
                     Sinusempfangssignal eine Periode von $T = 50\mu s$ und die
                     Grenzfrequenz $f = 0.2 kHz$. Für das Dreieckempfangssignal
@@ -506,17 +506,18 @@
     
 
                     
-                    Nach der Tiefpassfilterung erkennt kann aus dem demodulierten Signal glücklicherweise noch das
-                    originalsignal erkannt werden. Jedoch müssen wir durch die abschließende Tiefpassfilterung einen
-                    erheblichen Qualitätsverlust des Signals hinnehmen. Es ist gut möglich, dass wir mit dem
+                    Nach der Tiefpassfilterung kann aus dem demodulierten
+                    Signal glücklicherweise noch das Originalsignal erkannt werden. Jedoch müssen wir durch die abschließende 
+                    Tiefpassfilterung einen erheblichen Qualitätsverlust des Signals hinnehmen. Es ist gut möglich, dass wir mit dem
                     Tiefpassfilter nicht exakt genug gefiltert haben.\\
-                    Dass das demodulierte Signal in der Amplitude kleiner ist als das Originalsignal liegt an der
-                    Methode der Amplitudenmodulation. Bei jeder multiplikation mit dem Trägersignal wird die Energie des
+                    Dass das demodulierte Signal in der Amplitude kleiner ist
+                    als das Originalsignal, liegt an der Methode der Amplitudenmodulation. 
+                    Bei jeder Multiplikation mit dem Trägersignal wird die Energie des
                     Signals halbiert und um die Trägerfrequenz in positive und negative Richtung verschoben. Das heißt,
-                    dass das Ursprungssignal nach zweifacher multuplikation in vier gleichgroße Energiepakete aufgeteilt
-                    wurde. Da jedoch zwei dieser vier genau auf der Ursprungsfrequenz landen. Ist ihre Amplitude genau
+                    dass das Ursprungssignal nach zweifacher Multuplikation in vier gleichgroße Energiepakete aufgeteilt
+                    wurde. Da jedoch zwei dieser vier genau auf der Ursprungsfrequenz landen, ist ihre Amplitude genau
                     $\frac{1}{2}$ mal so groß wie die Original Amplitude. Mit diesem Wissen können wir das demodulierte
-                    Signal einfach verdoppel.\\
+                    Signal einfach verdoppeln.\\
                     Bei dem Dreieck- und dem Rechtecksignal klappt diese Methode recht gut.  Das Cosinussignal ist
                     leider immer noch zu klein in der Amplitude. In diesem Fall ist vermutlich wieder die Feinjustierung
                     des Tiefpasses dafür verantwortlich.\\
@@ -542,7 +543,7 @@
     	Nutzsignal mit einer variablen Frequenz und einer variablen Amplitude ein
     	moduliertes Signal mit einer festen Amplitude und variabler Frequenz. Die
     	Informationen des Nutzsignals sind in diesem Fall in den Frequenzen zu
-    	finden. Um dieses umzusetzten wird das modulierte Signal folgendermaßen
+    	finden. Um dieses umzusetzten, wird das modulierte Signal folgendermaßen
     	erstellt:
         
         \begin{equation*}
@@ -563,8 +564,8 @@
                 \cite{Modulatorkennlinie}
         \end{figure}
     
-        Um sich die Auswirkungen einer Frequenzmodulation zu veranschaulichen haben wir einen moduliertes Cosinussignal
-        simuliert und geplottet.
+        Um die Auswirkungen einer Frequenzmodulation zu veranschaulichen, haben
+        wir ein moduliertes Cosinussignal simuliert und geplottet.
         
         \begin{figure}[H]
         \centering
@@ -573,20 +574,21 @@
         \end{figure}
         
         In diesem Bild ist sehr schön zu sehen wie die Frequenzen des modulierten Signals von der Amplitude des
-        Nutzsignals abhängen. An den Stellen an denen das Nutzsignal ihre maximale Amplitude besitzt, besitzt das
-        modulierte Signal gleichzeitig die maximal Frequenz. Ähnliches gilt für die minimale Amplitude bzw. minimale
-        Frequenz.\vspace{1em}
+        Nutzsignals abhängen. An den Stellen, an denen das Nutzsignal ihre
+        maximale Amplitude besitzt, besitzt das modulierte Signal gleichzeitig
+        die maximale Frequenz. Ähnliches gilt für die minimale Amplitude bzw. minimale Frequenz.\vspace{1em}
         
         An diesem Bild lässt sich auch ein großer Vorteil dieser Art der Modulation erkennen. Das modulierte Signal
         besitzt immer die selbe Amplitude. Würde dieses Signal durch einen Rauschbehafteten Kanal übertragen und dadurch
         mit Rauschen behaftet werden, hätte dieses ausschließlich eine Auswirkung auf die Amplitude und nicht auf die
-        Frequenz. Da sich die Information des Nutzsignals jedoch in der Frequenz befindet ist dieses Signal sehr
-        Rauschunabhängig.\vspace{1em}
+        Frequenz. Da sich die Information des Nutzsignals jedoch in der Frequenz
+        befindet, ist dieses Signal sehr rauschunabhängig.\vspace{1em}
         
-        Der Nachteil dieses Verfahrens ist jedoch die Demodulation die komplexer ist als bei der Amplitudendemodulation.
+        Der Nachteil dieses Verfahrens ist jedoch die Demodulation, welche
+        komplexer ist als bei der Amplitudendemodulation.
         Eine Variante der Frequenzdemodulation ist, das modulierte Signal zuerst mit einem Bandpass zu filtern. Dadurch
         werden alle durch Rauschen entstandenen Amplituden abgeschnitten. Anschließend wird das Signal durch die
-        parallelschaltung zwei weiterer Bandpässe gesendet. Die Ausgangssignale der beiden Bandpasse werden anschließend
+        Parallelschaltung zwei weiterer Bandpässe gesendet. Die Ausgangssignale der beiden Bandpasse werden anschließend
         voneinander subtrahiert. Diese Schaltung nennt man Gegentaktdiskriminator. Nach dem Gegentaktdisktiminator ist
         das Nutzsignal noch in Amplitudenmodulierter Form vorhanden. Dieses Signal lässt sich dann so
         Amplitudendemodulieren wie im ersten Abschnitt beschrieben. Zuerst das Signal gleichrichten, anschließend den
@@ -596,10 +598,6 @@
     
     \subsection{Vorbereitungsaufgabe}
     \begin{quote}
-        Um ein Frequenzmoduliertes Signal zu simulieren, welches wir später mit einem gemessenen Signal zuvergleichen,
-        erzeugen wir ein Cosinussignal mit einer Frequenz von $1kHz$ und einer
-        Amplitude von $1V$. Anschließend\ldots
-        (was fehlt hier noch?)
         Wie schon bei der Amplitudenmodulation  haben wir ein moduliertes Signal erstellt, welches wir später mit einem
         gemessenen Signal vergleichen. Dazu haben wir ein Cosinussignal mit einer Frequenz von
         $1kHz$ und einer Amplitude von $1V$ erzeugt. Anschließend haben wir das Frequenz modulierte Signal mit dem
@@ -710,7 +708,7 @@
         Bei der ersten Messung erhielten wir eine $T_{min}$ von ungefähr 
         $84\mu s$, bei der zweiten Messung waren es für $T_{max}$ ungefähr 
         $120\mu s$. Mit diesen Werten können wir zunächst das $\Delta f_{max}$
-        berechnen, womit sich dann auch das $K_{FM}$ (mit $A_u = 1V$) berechnen
+        ermitteln, womit sich dann auch das $K_{FM}$ (mit $A_u = 1V$) berechnen
         lässt.
         
       \begin{equation*}
@@ -726,8 +724,18 @@
         
         Somit beträgt unser Proportionalitätsfaktor $K_{FM} = 11221.768$.\\
         
-        Für die Berechnung der Trägerfrequenz wird folgendes getan\ldots 
-       \TODO{müssen wir auf jeden Fall noch ergänzen} 
+        \vspace{0.5em}
+        
+        Die Trägerfrequenz $\omega_c$ ist in unserem Fall eine fest eingestellte
+        Frequenz im VCO-Modul, an der wir nichts verändert haben. Theoretisch könnte man
+        diese Frequenz ermitteln, indem man ein Nutzsignal mit einer Amplitude
+        von $0V$ frequenzmoduliert. Das würde bedeuten, dass die Frequenz des
+        modulierten Empfangssignals ausschließlich die Trägerfrequenz enthält.
+        Anhand unserer Frequenzmodulationen mit unterschiedlichen Nutzamplituden und
+        -frequenzen können wir aber in jedem enstandenen Amplitudenspektrum des
+        modulierten Empfangssignals sehen, dass die Impulse stets um $\pm
+        10000 Hz$ auftreten. Daraus schließen wir, dass das verwendete
+        Trägersignal eine Frequenz von $\omega_c= 10 kHz$ besitzt.
         
         Um einen Vergleich anstellen zu können, wurde auch das Spektrum des
         Sinussignals mit $1 kHz$ Frequenz aufgenommen. Die Ergebnisse folgen
@@ -764,7 +772,7 @@
             \end{center}
         
         An den Spektren kann man sehen \ldots \\
-        \TODO{noch zu ergänzen}
+        \TODO{Boris: noch zu ergänzen}
         
         Um die Auswirkung von Frequenz und Amplitude genauer untersuchen zu
         können, führten wir noch weitere Sinusnutzsignal-Messungen durch mit den
@@ -962,8 +970,6 @@
                         Signalverlauf am Comparator}
                 \end{figure}          
             
-
-           
             
            Hier kann man sehr genau die Funktion des Comparator erkennen. Da wir
            einen Sinus ohne Offset verwenden und die verwendete Referenzspannung
@@ -1040,7 +1046,7 @@
         Das demodulierte Signal besitzt einen Offset, keine korrekte Amplitude 
         und keinen sehr klaren Sinusverlauf. Diese Fehler können hauptsächlich
         dadurch entstehen, dass in unserer langen Kette an Modulen für die
-        Demodulation bei jedem Schritt ein teil der Amplitude verloren gehen
+        Demodulation bei jedem Schritt ein Teil der Amplitude verloren gehen
         kann. Dies geschieht zum Beispiel, wenn durch die hohe
         Sendesignalfrequenz der Comparator und der TPG steigende Flanken
         verpassen und kein korrektes Ausgangssignal weitergeben. Somit kann sich
@@ -1066,10 +1072,11 @@
 	Verwirklichungen der AM und FM gewinnen. Dennoch gab es einige Schwierigkeiten.
 	Unter anderem konnten wir zunächst bei der AM, welche für uns theoretisch und
 	praktisch einfacher zu verstehen und bearbeiten war, nicht verstehen, warum
-	unser demoduliertes Signal so sehr von dem verwendeten Nutzsignal abwich.
+	unser demoduliertes Cosinus-Signal so sehr von dem verwendeten Nutzsignal
+	abwich.
 	Später konnten wir es uns, wie bereits erwähnt, damit erklären, dass es
 	eventuell an der Tiefpasseinstellung lag und wir das Gain falsch an das
-	Empfangssignal angepasst haben.
+	Empfangssignal angepasst hatten.
 	
 	\vspace{0.5em}
 	
